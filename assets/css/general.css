@@ -1,0 +1,114 @@
+:root {
+  font-size: calc(var(--s0) + 0.5vw);
+  line-height: var(--ratio);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::before,
+*::after {
+  background-color: inherit;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  margin: 0;
+  overflow-wrap: break-word;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  hyphens: auto;
+  line-height: var(--line-height-small);
+}
+
+h1 {
+  font-size: var(--s3);
+}
+
+h2 {
+  font-size: var(--s2);
+}
+
+h3 {
+  font-size: var(--s1);
+}
+
+h4 {
+  font-size: var(--s0);
+}
+
+h1 > .header__sub-header {
+  font-size: calc(var(--s3) / 2);
+}
+
+h2 > .header__sub-header {
+  font-size: calc(var(--s2) / 2);
+}
+
+h3 > .header__sub-header {
+  font-size: calc(var(--s1) / 2);
+}
+
+h4 > .header__sub-header {
+  font-size: calc(var(--s0) / 2);
+}
+
+main > ol,
+main > ul,
+aside > ol,
+aside > ul {
+  padding-left: 2em;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+nav,
+main,
+header,
+footer {
+  display: block;
+}
+
+nav *,
+footer * {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  border-style: solid;
+  border-width: var(--border-thin);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
