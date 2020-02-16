@@ -1,0 +1,6 @@
+{{ $general := resources.Get "css/general.css" }}
+{{ $variables := resources.Get "css/variables.css" }}
+{{ $box := resources.Get "css/box.css" }}
+{{ $styles := slice $general $variables $box | resources.Concat "styles.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="none" onload="if(media!='all')media='all'" />
+<noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" /></noscript>
