@@ -1,0 +1,27 @@
+.filter_invert {
+  filter: invert(100%) !important;
+}
+
+.text-align_center {
+  text-align: center !important;
+}
+
+.text-align_left {
+  text-align: left !important;
+}
+
+.max-width_quarter {
+  max-width: calc(var(--measure) / 4) !important;
+}
+
+.max-width_half {
+  max-width: calc(var(--measure) / 2) !important;
+}
+
+.height_100\% {
+  height: 100%;
+}
+
+.width_100\% {
+  width: 100%;
+}

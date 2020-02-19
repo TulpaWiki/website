@@ -1,10 +1,16 @@
 .box {
   --border-width: var(--border-thin);
   --padding: var(--s1);
-  padding: var(--padding);
+  background-color: var(--color-light);
   border: var(--border-width) solid;
+  color: var(--color-dark);
+  padding: var(--padding);
 }
 
 .box * {
   color: inherit;
+}
+
+.box_no-padding {
+  --padding: 0;
 }

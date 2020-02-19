@@ -1,0 +1,25 @@
+.stack {
+  --space: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > *,
+.stack_recursive * {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.stack > * + *,
+.stack_recursive * + * {
+  margin-top: var(--space);
+}
+
+.stack:only-child {
+  height: 100%;
+}
+
+.stack > :nth-child(.stack__spliter) {
+  margin-bottom: auto;
+}
