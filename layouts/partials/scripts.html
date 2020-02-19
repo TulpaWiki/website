@@ -1,0 +1,4 @@
+{{ $grid := resources.Get "/js/grid.js" }}
+{{ $reel := resources.Get "/js/reel.js" }}
+{{ $scripts := slice $grid $reel | resources.Concat "scripts.js" | minify | fingerprint }}
+<script src="{{ $scripts.Permalink }}"></script>
