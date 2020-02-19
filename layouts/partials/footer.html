@@ -1,0 +1,31 @@
+<footer class="box stack">
+  <div class="switcher switcher_limit_4">
+    <div>
+      <div class="stack">
+        {{ with .Site.Menus.telegram }}
+          <div>
+            <h3>Telegram</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+        {{ with .Site.Menus.discord }}
+          <div>
+            <h3>Discord</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="center center_text">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Copyleft &#127279; {{ now.Format "2006" }} {{ .Site.Title }}</a>
+  </div>
+</footer>

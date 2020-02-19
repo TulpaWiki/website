@@ -1,0 +1,19 @@
+---
+telegram:
+  - identifier: channel
+    name: Канал
+    title: Официальный новостной канал в Telegram
+    url: https://t.me/joinchat/AAAAAEvXyxFnlVmZhEYbEA
+  - identifier: group
+    title: Официальная русскоязычная группа в Telegram
+    name: Группа
+    url: https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA
+discord:
+  - identifier: russian
+    name: Русскоязычный сервер
+    title: Официальный русскоязычный сервер в Discord
+    url: https://discord.gg/aWfvuXf
+  - identifier: international
+    title: Интернациональный сервер в Discord
+    name: Интернациональный сервер
+    url: https://discord.gg/SmqzMdq

@@ -5,3 +5,4 @@ enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
 title: TulpaWiki
+defaultContentLanguage: ru
