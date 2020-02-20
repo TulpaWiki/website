@@ -5,3 +5,7 @@
   translation: Discord
 - id: telegram
   translation: Telegram
+- id: theme_dark
+  translation: Тёмная тема
+- id: theme_light
+  translation: Светлая тема

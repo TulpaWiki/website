@@ -1,4 +1,14 @@
+{{ $themeSwitcher := resources.Get "/js/theme-switcher.js" }}
 {{ $grid := resources.Get "/js/grid.js" }}
 {{ $reel := resources.Get "/js/reel.js" }}
-{{ $scripts := slice $grid $reel | resources.Concat "scripts.js" | minify | fingerprint }}
+{{ $scripts := slice $themeSwitcher $grid $reel | resources.Concat "scripts.js" | minify | fingerprint }}
 <script src="{{ $scripts.Permalink }}"></script>
+<script>
+  new app.ThemeSwitcher({
+    target: document.querySelector('.js-theme-switcher'),
+    props: {
+      enabledLabel: {{ i18n "theme_dark" }},
+      disabledLabel: {{ i18n "theme_light" }}
+    }
+  });
+</script>

@@ -112,3 +112,9 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
