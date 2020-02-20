@@ -1,10 +1,8 @@
 .box {
   --border-width: var(--border-thin);
   --padding: var(--s1);
-  background-color: var(--color-light);
-  border: var(--border-width) solid;
-  color: var(--color-dark);
   padding: var(--padding);
+  border: var(--border-width) solid;
 }
 
 .box * {

@@ -1,25 +1,24 @@
 .stack {
-  --space: 1.5rem;
+  --space: var(--s0);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.stack > *,
-.stack_recursive * {
-  margin-bottom: 0;
+.stack > * {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
-.stack > * + *,
-.stack_recursive * + * {
+.stack > * + * {
   margin-top: var(--space);
 }
 
-.stack:only-child {
-  height: 100%;
+.stack_recursive > * {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.stack > :nth-child(.stack__spliter) {
-  margin-bottom: auto;
+.stack_recursive > * + * {
+  margin-top: var(--space);
 }

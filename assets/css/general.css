@@ -1,8 +1,4 @@
 :root {
-  --switch: calc((var(--color-background-l) - var(--contrast-threshold)) * -100);
-  background-color: hsl(var(--color-background));
-  color: hsl(0, 0%, var(--switch));
-  font-family: var(--font-plain);
   font-size: calc(var(--s0) + 0.5vw);
   line-height: var(--ratio);
 }
@@ -32,7 +28,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-special);
   font-weight: 700;
   hyphens: auto;
   line-height: var(--line-height-small);

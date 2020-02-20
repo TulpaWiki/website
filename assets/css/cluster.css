@@ -1,15 +1,15 @@
 .cluster {
-  --align: center;
+  --space: var(--s0);
   --justify: flex-start;
-  --space: var(--s1);
+  --align: center;
   overflow: hidden;
 }
 
 .cluster > * {
-  align-items: var(--align);
   display: flex;
   flex-wrap: wrap;
   justify-content: var(--justify);
+  align-items: var(--align);
   margin: calc(var(--space) / 2 * -1);
 }
 

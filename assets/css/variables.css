@@ -1,5 +1,4 @@
 :root {
-  /* Scale */
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -12,14 +11,9 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-
-  /* Measure */
   --measure: 65ch;
-
-  /* Line height */
   --line-height: var(--ratio);
   --line-height-small: calc(var(--ratio) * 0.8);
-
   --border-thin: var(--s-5);
   --border-thick: var(--s-2);
 }
