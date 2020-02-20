@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article class="stack">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+    {{ with .Page.Params.links }}
+      <div class="stack">
+        <h2>{{ i18n "links" }}</h2>
+        <ul>
+          {{ range . }}
+            <li><a href="{{ .url }}" title="{{ .title }}">{{ .pre }}{{ .name }}{{ .post }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </article>
+{{ end }}

@@ -1,12 +1,10 @@
-{{define "main"}}
-  <main class="box">
-    <h1>Home</h1>
-    <div class="stack">
-      <ul>
-        {{range .Pages}}
-          <li><a href="{{.Permalink}}">{{.Title}}</a></li>
-        {{end}}
-      </ul>
-    </div>
-  </main>
-{{end}}
+{{ define "main" }}
+  <h1>Home</h1>
+  <div>
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
