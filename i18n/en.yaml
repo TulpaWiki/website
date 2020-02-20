@@ -9,3 +9,9 @@
   translation: Dark theme
 - id: theme_light
   translation: Light theme
+- id: skip_header
+  translation: Skip to header
+- id: skip_main
+  translation: Skip to content
+- id: skip_footer
+  translation: Skip to footer

@@ -1,0 +1,14 @@
+.skip-links {
+  display: inline-block;
+}
+
+.skip-links__link {
+  position: absolute;
+  top: -100px;
+  padding: var(--s-3);
+  text-decoration: none;
+}
+
+.skip-links__link:focus {
+  top: 0;
+}

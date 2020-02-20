@@ -6,11 +6,12 @@
     {{ partial "styles" . }}
   </head>
   <body>
+    {{ partial "skip-links" . }}
     <div class="box sidebar sidebar_side_left">
       <div>
         {{ partial "header" . }}
         <div>
-          <main class="box">
+          <main id="main" class="box">
             {{ block "main" . }}{{ end }}
           </main>
           {{ partial "footer" . }}

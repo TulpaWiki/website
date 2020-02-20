@@ -9,3 +9,9 @@
   translation: Тёмная тема
 - id: theme_light
   translation: Светлая тема
+- id: skip_header
+  translation: Перейти к шапке
+- id: skip_main
+  translation: Перейти к контенту
+- id: skip_footer
+  translation: Перейти к подвалу
