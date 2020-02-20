@@ -4,7 +4,7 @@
       <div class="stack">
         {{ with .Site.Menus.telegram }}
           <div>
-            <h3>Telegram</h3>
+            <h3>{{ i18n "telegram" }}</h3>
             <ul>
               {{ range . }}
                 <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
@@ -14,7 +14,7 @@
         {{ end }}
         {{ with .Site.Menus.discord }}
           <div>
-            <h3>Discord</h3>
+            <h3>{{ i18n "discord" }}</h3>
             <ul>
               {{ range . }}
                 <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
