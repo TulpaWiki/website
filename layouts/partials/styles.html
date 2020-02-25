@@ -15,5 +15,4 @@
 {{ $themeSwitcher := resources.Get "/css/theme-switcher.css" }}
 {{ $skipLinks := resources.Get "/css/skip-links.css" }}
 {{ $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks | resources.Concat "styles.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="none" onload="if(media!='all')media='all'" />
-<noscript><link rel="stylesheet" href="{{ $styles.Permalink }}" /></noscript>
+<link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" media="print" onload="this.media='all'" />
