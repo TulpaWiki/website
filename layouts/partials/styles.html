@@ -1,3 +1,4 @@
+{{ $fonts := resources.Get "/css/fonts.css" }}
 {{ $variables := resources.Get "/css/variables.css" }}
 {{ $general := resources.Get "/css/general.css" }}
 {{ $switcher := resources.Get "/css/switcher.css" }}
@@ -14,5 +15,9 @@
 {{ $helpers := resources.Get "/css/helpers.css" }}
 {{ $themeSwitcher := resources.Get "/css/theme-switcher.css" }}
 {{ $skipLinks := resources.Get "/css/skip-links.css" }}
-{{ $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks | resources.Concat "styles.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" media="print" onload="this.media='all'" />
+{{ $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks | resources.Concat "styles.css" | minify | fingerprint }}
+<link rel="preload" href="{{ "/fonts/carlito-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/carlito-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/carlito-bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/carlito-bold-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" media="print" onload="this.media='all'">

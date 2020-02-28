@@ -1,0 +1,39 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Carlito Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/carlito-regular.woff2') format('woff2'),
+       url('/fonts/carlito-regular.woff') format('woff'),
+       url('/fonts/carlito-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Carlito Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/carlito-italic.woff2') format('woff2'),
+       url('/fonts/carlito-italic.woff') format('woff'),
+       url('/fonts/carlito-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Carlito Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/carlito-bold.woff2') format('woff2'),
+       url('/fonts/carlito-bold.woff') format('woff'),
+       url('/fonts/carlito-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Carlito BoldItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/carlito-bold-italic.woff2') format('woff2'),
+       url('/fonts/carlito-bold-italic.woff') format('woff'),
+       url('/fonts/carlito-bold-italic.ttf') format('truetype');
+}
