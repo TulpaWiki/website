@@ -23,6 +23,18 @@
           </div>
         {{ end }}
       </div>
+      <div class="stack">
+        {{ with .Site.Menus.partners }}
+          <div>
+            <h3>{{ i18n "menu_partners" }}</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
     </div>
   </div>
   <div class="cluster cluster_justify_space-between cluster_align_center">

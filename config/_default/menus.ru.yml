@@ -17,3 +17,12 @@ discord:
     title: Интернациональный сервер в Discord
     name: Интернациональный сервер
     url: https://discord.gg/SmqzMdq
+partners:
+  - identifier: tulpa_info
+    name: Tulpa.info
+    title: Главный интернациональный ресурс о феномене
+    url: https://tulpa.info/
+  - identifier: deskchan
+    name: DeskChan
+    title: Персональный цифровой ассистент с кастомизацией характера
+    url: https://deskchan.info/

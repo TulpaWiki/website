@@ -5,6 +5,8 @@
   translation: Discord
 - id: menu_telegram
   translation: Telegram
+- id: menu_partners
+  translation: Partners
 - id: theme_dark
   translation: Dark theme
 - id: theme_light
