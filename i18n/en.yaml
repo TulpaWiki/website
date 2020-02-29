@@ -17,3 +17,7 @@
   translation: Skip to content
 - id: skip_footer
   translation: Skip to footer
+- id: sources
+  translation:
+    one: "source:"
+    other: "sources:"

@@ -17,3 +17,7 @@
   translation: Перейти к контенту
 - id: skip_footer
   translation: Перейти к подвалу
+- id: sources
+  translation:
+    one: "источник:"
+    other: "источники:"

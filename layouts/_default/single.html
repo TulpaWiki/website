@@ -1,6 +1,9 @@
 {{ define "main" }}
   <article class="stack">
     <h1>{{ .Title }}</h1>
+    <small>
+      {{ partial "components/sources-list" . }}
+    </small>
     <p>{{ .Content }}</p>
     {{ with .Page.Params.links }}
       <div class="stack">
