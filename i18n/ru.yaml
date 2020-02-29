@@ -1,9 +1,9 @@
 ---
 - id: links
   translation: Ссылки
-- id: discord
+- id: menu_discord
   translation: Discord
-- id: telegram
+- id: menu_telegram
   translation: Telegram
 - id: theme_dark
   translation: Тёмная тема
