@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ if .Site.IsServer }}<h1>single</h1>{{ end }}
   <article class="stack">
     <h1>{{ .Title }}</h1>
     <small>

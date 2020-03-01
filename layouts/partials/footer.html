@@ -3,7 +3,7 @@
     <div>
       <div class="stack">
         {{ with .Site.Menus.telegram }}
-          <div>
+          <div class="stack">
             <h3>{{ i18n "menu_telegram" }}</h3>
             <ul>
               {{ range . }}
@@ -13,7 +13,7 @@
           </div>
         {{ end }}
         {{ with .Site.Menus.discord }}
-          <div>
+          <div class="stack">
             <h3>{{ i18n "menu_discord" }}</h3>
             <ul>
               {{ range . }}
@@ -25,7 +25,7 @@
       </div>
       <div class="stack">
         {{ with .Site.Menus.partners }}
-          <div>
+          <div class="stack">
             <h3>{{ i18n "menu_partners" }}</h3>
             <ul>
               {{ range . }}
@@ -39,7 +39,7 @@
   </div>
   <div class="cluster cluster_justify_space-between cluster_align_center">
     <div>
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Copyleft &#127279; {{ now.Format "2006" }} {{ .Site.Title }}</a>
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">&#127279; {{ now.Format "2006" }} {{ .Site.Title }}</a>
       {{ partial "components/theme-switcher" . }}
     </div>
   </div>

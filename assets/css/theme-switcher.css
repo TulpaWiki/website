@@ -9,6 +9,7 @@
 }
 
 video,
+iframe,
 img:not([src*=".svg"]) {
   filter: invert(calc(var(--filter) * 1%));
 }
