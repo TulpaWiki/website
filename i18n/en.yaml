@@ -1,6 +1,4 @@
 ---
-- id: links
-  translation: Links
 - id: menu_discord
   translation: Discord
 - id: menu_telegram
