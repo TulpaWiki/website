@@ -1,5 +1,10 @@
-<header id="header" class="box">
-  <div class="stack">
-    <h1><a href="/">{{ .Site.Title }}</a></h1>
-  </div>
+<header class="box" id="header">
+  <nav class="reel js-reel">
+    <div role="listitem"><a href="/"><b>{{ .Site.Title }}</b></a></div>
+    {{ range .Site.Menus.general }}
+      <div role="listitem">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </div>
+    {{ end }}
+  </nav>
 </header>
