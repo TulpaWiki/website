@@ -17,5 +17,4 @@ img:not([src*=".svg"]) {
 .theme-switcher {
   color: #ffffff;
   background-color: #000000;
-  padding: var(--s-2) var(--s0);
 }
