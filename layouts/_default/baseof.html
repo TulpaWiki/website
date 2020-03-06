@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Page.Lang }}">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {{ partial "meta" . }}
     <title>{{ .Page.Title }}</title>
     {{ partial "styles" . }}
   </head>
