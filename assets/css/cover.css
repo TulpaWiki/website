@@ -28,3 +28,23 @@
 .cover_no-padding {
   padding: 0;
 }
+
+.cover_min-height_25vh {
+  --min-height: 25vh;
+}
+
+.cover_min-height_30vh {
+  --min-height: 30vh;
+}
+
+.cover_min-height_50vh {
+  --min-height: 50vh;
+}
+
+.cover_min-height_75vh {
+  --min-height: 75vh;
+}
+
+.cover_min-height_100vh {
+  --min-height: 100vh;
+}

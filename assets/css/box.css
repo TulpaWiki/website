@@ -12,3 +12,7 @@
 .box_no-padding {
   --padding: 0;
 }
+
+.box_boder_none {
+  border: none;
+}

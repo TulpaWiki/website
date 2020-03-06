@@ -2,6 +2,8 @@
 en:
   languageName: English
   weight: 1
+  description: Don't go alone anymore!
 ru:
   languageName: Русский
   weight: 2
+  description: Больше не ходи один!

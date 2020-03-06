@@ -9,6 +9,14 @@
     {{ partial "components/skip-links" . }}
     <div class="stack">
       {{ partial "header" . }}
+      {{ if .IsHome }}
+        <div class="cover cover_min-height_30vh">
+          <div class="cover__centered center center_text">
+            <h1>{{ .Site.Title }}</h1>
+            <p>{{ .Site.Params.description }}</p>
+          </div>
+        </div>
+      {{ end }}
       <main class="center" id="main">
         {{ block "main" . }}{{ end }}
       </main>
