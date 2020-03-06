@@ -1,20 +1,11 @@
 {{ define "main" }}
-  {{ if .Site.IsServer }}<h1>single</h1>{{ end }}
   <article class="stack">
     <h1>{{ .Title }}</h1>
-    <small>
-      {{ partial "components/sources-list" . }}
-    </small>
-    <p>{{ .Content }}</p>
-    {{ with .Page.Params.links }}
-      <div class="stack">
-        <h2>{{ i18n "links" }}</h2>
-        <ul>
-          {{ range . }}
-            <li><a href="{{ .url }}" title="{{ .title }}">{{ .pre }}{{ .name }}{{ .post }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
+    {{ if .Params.sources }}
+      <small>
+        {{ partial "components/sources-list" . }}
+      </small>
     {{ end }}
+    {{ with .Content }}{{ . }}{{ end }}
   </article>
 {{ end }}

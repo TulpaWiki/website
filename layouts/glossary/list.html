@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{ $numbers := split "0123456789" ""}}
   {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+  {{ $numbers := split "0123456789" ""}}
   <article class="stack">
     <h1 class="center">{{ .Title }}</h1>
     {{ with .Content }}{{ . }}{{ end }}

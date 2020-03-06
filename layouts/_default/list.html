@@ -1,13 +1,10 @@
 {{ define "main" }}
-  {{ if .Site.IsServer }}<h1>list</h1>{{ end }}
   <article class="stack">
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    <ul class="stack">
+    {{ with .Content }}{{ . }}{{ end }}
+    <ul>
       {{ range .Pages }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
   </article>
