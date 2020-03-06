@@ -5,6 +5,8 @@
   translation: Telegram
 - id: menu_partners
   translation: Партнёры
+- id: menu_patrons
+  translation: Спонсоры
 - id: theme_dark
   translation: Тёмная тема
 - id: theme_light
