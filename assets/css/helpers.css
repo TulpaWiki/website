@@ -25,3 +25,7 @@
 .width_100\% {
   width: 100%;
 }
+
+.list-style_none {
+  list-style: none;
+}

@@ -25,3 +25,12 @@
   flex-basis: 100%;
 }
 
+.switcher_limit_4 > * > :nth-last-child(n+5),
+.switcher_limit_4 > * > :nth-last-child(n+5) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher_limit_5 > * > :nth-last-child(n+6),
+.switcher_limit_5 > * > :nth-last-child(n+6) ~ * {
+  flex-basis: 100%;
+}

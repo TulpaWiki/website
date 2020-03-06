@@ -1,0 +1,59 @@
+{{ define "main" }}
+  {{ $numbers := split "0123456789" ""}}
+  {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+  <article class="stack">
+    <h1 class="center">{{ .Title }}</h1>
+    {{ with .Content }}{{ . }}{{ end }}
+    <div class="cluster">
+      <ul class="list-style_none">
+        <li><a href="#_">0-9</a></li>
+        {{ range $letters }}
+          <li><a href="#{{ . | lower }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="switcher switcher_limit_5">
+      <div>
+        {{ range $i, $number := $numbers }}
+          {{ $pages := slice }}
+          {{ range $.Pages.ByTitle }}
+            {{ if hasPrefix .Name $number }}
+              {{ $pages = $pages | append . }}
+            {{ end }}
+          {{ end }}
+          {{ if gt $pages 0 }}
+            <div class="stack">
+              <h2 id="_">0-9</h2>
+              <hr/>
+              <ul class="list-style_none">
+                {{ range $pages }}
+                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        {{ end }}
+
+        {{ range $i, $letter := $letters }}
+          {{ $pages := slice }}
+          {{ range $.Pages.ByTitle }}
+            {{ if hasPrefix .Name $letter }}
+              {{ $pages = $pages | append . }}
+            {{ end }}
+          {{ end }}
+          {{ if gt $pages 0 }}
+            <div class="stack">
+              <h2 id="{{ $letter | lower }}">{{ $letter | upper }}</h2>
+              <hr/>
+              <ul class="list-style_none">
+                {{ range $pages }}
+                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </article>
+{{ end }}
