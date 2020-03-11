@@ -38,7 +38,14 @@
       </div>
       {{ with .Site.Data.patrons }}
         <div class="stack">
-          <h3>{{ i18n "menu_patrons" }}</h3>
+          <div class="cluster cluster_align_left">
+            <div>
+              <h3>{{ i18n "menu_patrons" }}</h3>
+              <a href="//patreon.com/join/toby3d">
+                <img src="{{ "/images/become_a_patron_button.png" | absURL }}" width="217" height="51" alt="become a patron button" />
+              </a>
+            </div>
+          </div>
           <div class="cluster">
             <ul>
               {{ range .patrons }}
