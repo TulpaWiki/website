@@ -1,0 +1,67 @@
+<hr/>
+<footer id="footer" class="box box_boder_none stack">
+  <div class="switcher switcher_limit_4">
+    <div>
+      <div class="stack">
+        {{ with .Site.Menus.telegram }}
+          <div class="stack">
+            <h3>{{ i18n "menu_telegram" }}</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+        {{ with .Site.Menus.discord }}
+          <div class="stack">
+            <h3>{{ i18n "menu_discord" }}</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+      <div class="stack">
+        {{ with .Site.Menus.partners }}
+          <div class="stack">
+            <h3>{{ i18n "menu_partners" }}</h3>
+            <ul>
+              {{ range . }}
+                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+      {{ with .Site.Data.patrons }}
+        <div class="stack">
+          <h3>{{ i18n "menu_patrons" }}</h3>
+          <div class="cluster">
+            <ul>
+              {{ range .patrons }}
+                <li>
+                  {{ if .link }}<a href="{{ .link }}" title="{{ .name }}">{{ end }}
+                  {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .name }}" />
+                  {{ else }}
+                    {{ .name }}
+                  {{ end }}
+                  {{ if .link }}</a>{{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="cluster cluster_justify_space-between cluster_align_center">
+    <div>
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">&#127279; {{ now.Format "2006" }} {{ .Site.Title }}</a>
+      {{ partial "components/theme-switcher" . }}
+    </div>
+  </div>
+</footer>

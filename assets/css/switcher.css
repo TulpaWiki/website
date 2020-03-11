@@ -1,0 +1,36 @@
+.switcher {
+  --space: var(--s1);
+  --threshold: var(--measure);
+}
+
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--space) / 2) * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999);
+  margin: calc(var(--space) / 2);
+}
+
+.switcher_limit_2 > * > :nth-last-child(n+3),
+.switcher_limit_2 > * > :nth-last-child(n+3) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher_limit_3 > * > :nth-last-child(n+4),
+.switcher_limit_3 > * > :nth-last-child(n+4) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher_limit_4 > * > :nth-last-child(n+5),
+.switcher_limit_4 > * > :nth-last-child(n+5) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher_limit_5 > * > :nth-last-child(n+6),
+.switcher_limit_5 > * > :nth-last-child(n+6) ~ * {
+  flex-basis: 100%;
+}

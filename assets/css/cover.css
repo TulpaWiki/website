@@ -1,0 +1,50 @@
+.cover {
+  --space: 0;
+  --min-height: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-height);
+  padding: var(--space);
+}
+
+.cover > * {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+}
+
+.cover > :first-child:not(.cover__centered) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.cover__centered) {
+  margin-bottom: 0;
+}
+
+.cover > .cover__centered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cover_no-padding {
+  padding: 0;
+}
+
+.cover_min-height_25vh {
+  --min-height: 25vh;
+}
+
+.cover_min-height_30vh {
+  --min-height: 30vh;
+}
+
+.cover_min-height_50vh {
+  --min-height: 50vh;
+}
+
+.cover_min-height_75vh {
+  --min-height: 75vh;
+}
+
+.cover_min-height_100vh {
+  --min-height: 100vh;
+}

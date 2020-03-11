@@ -1,0 +1,23 @@
+---
+- id: menu_discord
+  translation: Discord
+- id: menu_telegram
+  translation: Telegram
+- id: menu_partners
+  translation: Партнёры
+- id: menu_patrons
+  translation: Спонсоры
+- id: theme_dark
+  translation: Тёмная тема
+- id: theme_light
+  translation: Светлая тема
+- id: skip_header
+  translation: Перейти к шапке
+- id: skip_main
+  translation: Перейти к контенту
+- id: skip_footer
+  translation: Перейти к подвалу
+- id: sources
+  translation:
+    one: "источник:"
+    other: "источники:"

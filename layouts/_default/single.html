@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="stack">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.sources }}
+      <small>
+        {{ partial "components/sources-list" . }}
+      </small>
+    {{ end }}
+    {{ with .Content }}{{ . }}{{ end }}
+  </article>
+{{ end }}

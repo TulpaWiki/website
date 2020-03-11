@@ -1,0 +1,24 @@
+.stack {
+  --space: var(--s0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.stack_recursive > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack_recursive > * + * {
+  margin-top: var(--space);
+}

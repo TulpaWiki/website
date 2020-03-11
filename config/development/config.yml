@@ -1,2 +1,4 @@
 ---
 baseURL: http://localhost:1313/
+disableLiveReload: false
+watch: true

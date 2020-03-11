@@ -1,0 +1,20 @@
+:root {
+  --filter: 0;
+  background-color: #fefefe;
+  filter: invert(calc(var(--filter) * 1%));
+}
+
+* {
+  background-color: inherit;
+}
+
+video,
+iframe,
+img:not([src*=".svg"]) {
+  filter: invert(calc(var(--filter) * 1%));
+}
+
+.theme-switcher {
+  color: #ffffff;
+  background-color: #000000;
+}

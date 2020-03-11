@@ -1,0 +1,23 @@
+---
+- id: menu_discord
+  translation: Discord
+- id: menu_telegram
+  translation: Telegram
+- id: menu_partners
+  translation: Partners
+- id: menu_patrons
+  translation: Patrons
+- id: theme_dark
+  translation: Dark theme
+- id: theme_light
+  translation: Light theme
+- id: skip_header
+  translation: Skip to header
+- id: skip_main
+  translation: Skip to content
+- id: skip_footer
+  translation: Skip to footer
+- id: sources
+  translation:
+    one: "source:"
+    other: "sources:"
