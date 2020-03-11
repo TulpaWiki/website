@@ -23,3 +23,5 @@
     other: "sources:"
 - id: contacts__write
   translation: Write
+- id: menu_patrons__add-yourself
+  translation: You?

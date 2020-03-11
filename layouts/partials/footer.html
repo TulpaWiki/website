@@ -52,13 +52,14 @@
                 <li>
                   {{ if .link }}<a href="{{ .link }}" title="{{ .name }}">{{ end }}
                   {{ if .image }}
-                    <img src="{{ .image }}" alt="{{ .name }}" />
+                    <img src="{{ .image }}" width="64" height="64" alt="{{ .name }}" />
                   {{ else }}
                     {{ .name }}
                   {{ end }}
                   {{ if .link }}</a>{{ end }}
                 </li>
               {{ end }}
+              <li><a href="{{ "/donate" | absURL }}">{{ i18n "menu_patrons__add-yourself" }}</a></li>
             </ul>
           </div>
         </div>

@@ -23,3 +23,5 @@
     other: "источники:"
 - id: contacts__write
   translation: Написать
+- id: menu_patrons__add-yourself
+  translation: Вы?
