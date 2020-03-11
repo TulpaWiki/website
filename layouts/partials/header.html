@@ -2,9 +2,7 @@
   <nav class="reel js-reel">
     <div role="listitem"><a href="/"><b>{{ .Site.Title }}</b></a></div>
     {{ range .Site.Menus.general }}
-      <div role="listitem">
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </div>
+      <div role="listitem"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></div>
     {{ end }}
   </nav>
 </header>

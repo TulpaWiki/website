@@ -1,8 +1,6 @@
 {{ define "main" }}
   <article class="stack">
-    {{/* if not .IsHome */}}
-      <h1>{{ .Title }}</h1>
-    {{/* end */}}
+    <h1>{{ .Title }}</h1>
     {{ with .Content }}{{ . }}{{ end }}
     <ul>
       {{ range .Pages }}

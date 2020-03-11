@@ -1,8 +1,7 @@
 {{ define "main" }}
-  {{ if .Site.IsServer }}<h1>terms</h1>{{ end }}
   <article class="stack">
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    {{ with .Content }}{{ . }}{{ end }}
     <ul class="stack">
       {{ range .Data.Pages }}
         <li>

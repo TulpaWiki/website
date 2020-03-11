@@ -43,7 +43,7 @@
             <ul>
               {{ range .patrons }}
                 <li>
-                  {{ if .link }}<a href="{{ .link }}" title={{ .name }}>{{ end }}
+                  {{ if .link }}<a href="{{ .link }}" title="{{ .name }}">{{ end }}
                   {{ if .image }}
                     <img src="{{ .image }}" alt="{{ .name }}" />
                   {{ else }}
