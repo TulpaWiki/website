@@ -1,8 +1,5 @@
 :root {
-  --font-regular: 'Carlito Regular', sans-serif;
-  --font-italic: 'Carlito Italic', sans-serif;
-  --font-bold: 'Carlito Bold', sans-serif;
-  --font-bold-italic: 'Carlito BoldItalic', sans-serif;
+  --font-family: 'Inter', Variable Fallback, Arial, sans-serif;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));

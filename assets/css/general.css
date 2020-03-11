@@ -1,5 +1,5 @@
 :root {
-  font-family: var(--font-regular);
+  font-family: var(--font-family);
   font-size: calc(var(--s0) + 0.5vw);
   line-height: var(--ratio);
 }
@@ -29,10 +29,10 @@ h1,
 h2,
 h3,
 h4 {
+  font-variation-settings: 'wght' 700;
   font-weight: 700;
   hyphens: auto;
   line-height: var(--line-height-small);
-  font-family: var(--font-bold);
 }
 
 h1 {
