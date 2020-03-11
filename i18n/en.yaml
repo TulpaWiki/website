@@ -21,3 +21,5 @@
   translation:
     one: "source:"
     other: "sources:"
+- id: contacts__write
+  translation: Write

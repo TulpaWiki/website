@@ -21,3 +21,5 @@
   translation:
     one: "источник:"
     other: "источники:"
+- id: contacts__write
+  translation: Написать
