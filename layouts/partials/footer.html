@@ -41,20 +41,26 @@
           <div class="cluster cluster_align_left">
             <div>
               <h3>{{ i18n "menu_patrons" }}</h3>
-              <a href="//patreon.com/join/toby3d">
-                <img src="{{ "/images/become_a_patron_button.png" | absURL }}" width="217" height="51" alt="become a patron button" />
-              </a>
+              {{ $imagePath := "static/images/become_a_patron_button.png" }}
+              {{ if (fileExists $imagePath) }}
+                <a href="//patreon.com/join/toby3d" target="_blank">
+                  {{ $config := imageConfig $imagePath }}
+                  <img src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="become a patron button" />
+                </a>
+              {{ end }}
             </div>
           </div>
           <div class="cluster">
-            <ul>
+            <ul class="center_text">
               {{ range .patrons }}
                 <li>
-                  {{ if .link }}<a href="{{ .link }}" title="{{ .name }}">{{ end }}
-                  {{ if .image }}
-                    <img src="{{ .image }}" width="64" height="64" alt="{{ .name }}" />
+                  {{ if .link }}<a href="{{ .link }}" title="{{ .name }}" rel="nofollow" target="_blank">{{ end }}
+                  {{ $imagePath := (print "static/images/patrons/" .id ".png") }}
+                  {{ if (and (gt .id 0) (fileExists $imagePath)) }}
+                    {{ $config := imageConfig $imagePath }}
+                    <img src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="{{ .name }}" loading="lazy" />
                   {{ else }}
-                    {{ .name }}
+                    {{ delimit (split .name " ") "<br/>" }}
                   {{ end }}
                   {{ if .link }}</a>{{ end }}
                 </li>
