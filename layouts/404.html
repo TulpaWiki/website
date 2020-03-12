@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Lang }}">
+  <head>
+    <meta name="robots" content="noindex" />
+    {{ partial "meta" . }}
+    <title>{{ println ":scream:" (i18n "404__header") "|" .Site.Title | emojify }}</title>
+    {{ partial "styles" . }}
+  </head>
+  <body class="cover cover_min-height_100vh">
+    <main class="cover__centered center center_text">
+      <hgroup>
+        <h1>{{ i18n "404__header" }}</h1>
+        <h2>{{ i18n "404__sub-header" }}</h2>
+      </hgroup>
+      <div class="frame">
+        <!-- <video autoplay loop muted playsinline>
+          <source src="{{ "/video/glitch.av1.mp4" | absURL }}" type="video/mp4; codecs=av1.0.05M.08" />
+          <source src="{{ "/video/glitch.h264.mp4" | absURL }}" type="video/mp4" />
+        </video> -->
+      </div>
+      <div>
+        <p>{{ i18n "404__description" }}</p>
+        <a href="{{ .Site.BaseURL | relURL }}" target="_self">{{ i18n "404__back-link" }}</a>
+      </div>
+    </main>
+    {{ partial "scripts" . }}
+  </body>
+</html>

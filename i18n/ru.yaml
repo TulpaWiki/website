@@ -25,3 +25,11 @@
   translation: Написать
 - id: menu_patrons__add-yourself
   translation: Вы?
+- id: 404__header
+  translation: О нет!
+- id: 404__sub-header
+  translation: Страница не найдена
+- id: 404__description
+  translation: Вероятно, в адресе страницы есть опечатка, страница была перемещена, удалена, либо её никогда не существовало.
+- id: 404__back-link
+  translation: Вернуться на главную
