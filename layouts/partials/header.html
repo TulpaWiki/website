@@ -1,8 +1,10 @@
 <header class="box box_boder_none" id="header">
-  <nav class="reel js-reel">
-    <div role="listitem"><a href="/"><b>{{ .Site.Title }}</b></a></div>
-    {{ range .Site.Menus.general }}
-      <div role="listitem"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></div>
-    {{ end }}
+  <nav>
+    <ul class="reel js-reel">
+      <li><a href="/">{{ .Site.Title }}</a></li>
+      {{ range .Site.Menus.general }}
+        <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
   </nav>
 </header>

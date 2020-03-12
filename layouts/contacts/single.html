@@ -6,10 +6,10 @@
       {{ range .Page.Resources.Match (print "*." .Language ".md") }}
         <div class="box cluster cluster_justify_space-between cluster_align_center">
           <div>
-            {{ with .Params.image }}
-              {{ $image := $.Page.Resources.GetMatch . }}
+            {{ if .Params.image }}
+              {{ $image := $.Page.Resources.GetMatch .Params.image }}
               <span>
-                <img src="{{ $image.Permalink | absURL }}" width="64" height="64" />
+                <img alt="{{ .Params.name }}" src="{{ $image.Permalink | absURL }}" width="64" height="64" loading="lazy">
               </span>
             {{ end }}
             <span>

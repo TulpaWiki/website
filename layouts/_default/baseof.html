@@ -2,7 +2,7 @@
 <html lang="{{ .Page.Lang }}">
   <head>
     {{ partial "meta" . }}
-    <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+    <title>{{ println .Page.Title "|" .Site.Title }}</title>
     {{ partial "styles" . }}
   </head>
   <body>
@@ -17,7 +17,7 @@
           </div>
         </div>
       {{ end }}
-      <main class="center" id="main">
+      <main class="center center_padding_gutters" id="main">
         {{ block "main" . }}{{ end }}
       </main>
       {{ partial "footer" . }}

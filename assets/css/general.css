@@ -1,7 +1,9 @@
 :root {
   font-family: var(--font-family);
   font-size: calc(var(--s0) + 0.5vw);
+  hyphens: auto;
   line-height: var(--ratio);
+  word-break: break-word;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,7 +33,6 @@ h3,
 h4 {
   font-variation-settings: 'wght' 700;
   font-weight: 700;
-  hyphens: auto;
   line-height: var(--line-height-small);
 }
 
@@ -98,6 +99,7 @@ footer * {
 
 img {
   width: 100%;
+  background-color: transparent;
 }
 
 hr {

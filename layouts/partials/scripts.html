@@ -2,7 +2,7 @@
 {{ $grid := resources.Get "/js/grid.js" }}
 {{ $reel := resources.Get "/js/reel.js" }}
 {{ $scripts := slice $themeSwitcher $grid $reel | resources.Concat "scripts.js" | minify | fingerprint }}
-<script src="{{ $scripts.Permalink }}"></script>
+<script src="{{ $scripts.Permalink | relURL }}"></script>
 <script>
   new app.ThemeSwitcher({
     target: document.querySelector('.js-theme-switcher'),

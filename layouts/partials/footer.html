@@ -1,43 +1,49 @@
-<hr/>
+<hr>
 <footer id="footer" class="box box_boder_none stack">
-  <div class="switcher switcher_limit_4">
+  <div class="switcher switcher_limit_3">
     <div>
       <div class="stack">
         {{ with .Site.Menus.telegram }}
-          <div class="stack">
+          <section class="stack">
             <h3>{{ i18n "menu_telegram" }}</h3>
-            <ul>
-              {{ range . }}
-                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
-              {{ end }}
-            </ul>
-          </div>
+            <nav>
+              <ul>
+                {{ range . }}
+                  <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                {{ end }}
+              </ul>
+            </nav>
+          </section>
         {{ end }}
         {{ with .Site.Menus.discord }}
-          <div class="stack">
+          <section class="stack">
             <h3>{{ i18n "menu_discord" }}</h3>
-            <ul>
-              {{ range . }}
-                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
-              {{ end }}
-            </ul>
-          </div>
+            <nav>
+              <ul>
+                {{ range . }}
+                  <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                {{ end }}
+              </ul>
+            </nav>
+          </section>
         {{ end }}
       </div>
       <div class="stack">
         {{ with .Site.Menus.partners }}
-          <div class="stack">
+          <section class="stack">
             <h3>{{ i18n "menu_partners" }}</h3>
-            <ul>
-              {{ range . }}
-                <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
-              {{ end }}
-            </ul>
-          </div>
+            <nav>
+              <ul>
+                {{ range . }}
+                  <li><a href="{{ .URL }}" title="{{ .Title }}" rel="nofollow" target="_blank">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                {{ end }}
+              </ul>
+            </nav>
+          </section>
         {{ end }}
       </div>
       {{ with .Site.Data.patrons }}
-        <div class="stack">
+        <section class="stack">
           <div class="cluster cluster_align_left">
             <div>
               <h3>{{ i18n "menu_patrons" }}</h3>
@@ -45,7 +51,7 @@
               {{ if (fileExists $imagePath) }}
                 <a href="//patreon.com/join/toby3d" target="_blank">
                   {{ $config := imageConfig $imagePath }}
-                  <img src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="become a patron button" />
+                  <img alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
                 </a>
               {{ end }}
             </div>
@@ -56,9 +62,9 @@
                 <li>
                   {{ if .link }}<a href="{{ .link }}" title="{{ .name }}" rel="nofollow" target="_blank">{{ end }}
                   {{ $imagePath := (print "static/images/patrons/" .id ".png") }}
-                  {{ if (and (gt .id 0) (fileExists $imagePath)) }}
+                  {{ if (and .id (fileExists $imagePath)) }}
                     {{ $config := imageConfig $imagePath }}
-                    <img src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="{{ .name }}" loading="lazy" />
+                    <img alt="{{ .name }}" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
                   {{ else }}
                     {{ delimit (split .name " ") "<br/>" }}
                   {{ end }}
@@ -68,14 +74,17 @@
               <li><a href="{{ "/donate" | absURL }}">{{ i18n "menu_patrons__add-yourself" }}</a></li>
             </ul>
           </div>
-        </div>
+        </section>
       {{ end }}
     </div>
   </div>
+  <hr>
   <div class="cluster cluster_justify_space-between cluster_align_center">
-    <div>
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">&#127279; {{ now.Format "2006" }} {{ .Site.Title }}</a>
+    <small>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
+        &#127279; {{ now.Format "2006" }} {{ .Site.Title }}
+      </a>
       {{ partial "components/theme-switcher" . }}
-    </div>
+    </small>
   </div>
 </footer>
