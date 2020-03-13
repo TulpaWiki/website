@@ -15,6 +15,8 @@
 {{ $helpers := resources.Get "/css/helpers.css" }}
 {{ $themeSwitcher := resources.Get "/css/theme-switcher.css" }}
 {{ $skipLinks := resources.Get "/css/skip-links.css" }}
-{{ $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks | resources.Concat "styles.css" | minify | fingerprint }}
-<link href="{{ "/fonts/inter.ttf" | relURL }}" crossorigin rel="preload" type="font/ttf" as="font">
-<link href="{{ $styles.Permalink | relURL }}" rel="stylesheet" media="print" type="text/css" title="default" onload="this.media='all'">
+{{- $liteYouTube := resources.Get "css/lite-yt-embed.css" | minify | fingerprint -}}
+{{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube | resources.Concat "styles.css" | minify | fingerprint -}}
+<link href="{{ "/fonts/inter.ttf" | relURL }}" crossorigin="anonymous" rel="preload" type="font/ttf" as="font">
+<link href="{{ $styles.Permalink | relURL }}" rel="preload" media="all" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ $styles.Permalink | relURL }}" rel="stylesheet" media="all" type="text/css" as="style"></noscript>
