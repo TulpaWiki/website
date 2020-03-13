@@ -1,7 +1,7 @@
 <header class="box box_boder_none" id="header">
-  <nav>
+  <nav role="navigation">
     <ul class="reel js-reel">
-      <li><a href="/">{{ .Site.Title }}</a></li>
+      <li><a href="/" title="{{ (.Site.GetPage "/").Title }}">{{ .Site.Title }}</a></li>
       {{ range .Site.Menus.general }}
         <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
       {{ end }}

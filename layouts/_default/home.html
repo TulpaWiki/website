@@ -1,5 +1,19 @@
-{{ define "main" }}
-  <article class="stack">
-    {{ with .Content }}{{ . }}{{ end }}
-  </article>
-{{ end }}
+{{- define "main" }}
+  <div class="cover cover_min-height_30vh">
+    <div class="cover__centered center center_text stack">
+      {{- if .Site.Params.description }}
+        <hgroup>
+          <h1>{{ .Site.Title }}</h1>
+          <h2>{{ .Site.Params.description }}</h2>
+        </hgroup>
+      {{- else -}}
+        <h1>{{ .Site.Title }}</h1>
+      {{ end -}}
+    </div>
+  </div>
+  <main class="center center_padding_gutters" id="main" role="main">
+    <article class="stack">
+      {{ with .Content }}{{ . }}{{ end }}
+    </article>
+  </main>
+{{ end -}}

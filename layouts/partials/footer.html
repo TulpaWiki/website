@@ -1,5 +1,4 @@
-<hr>
-<footer id="footer" class="box box_boder_none stack">
+<footer id="footer" class="box box_border_none box_boder_top stack">
   <div class="switcher switcher_limit_4">
     <div>
       <div class="stack">
@@ -56,18 +55,15 @@
       </div>
       {{ with .Site.Data.patrons }}
         <section class="stack">
-          <div class="cluster cluster_align_left">
-            <div>
-              <h3>{{ i18n "menu_patrons" }}</h3>
-              {{ $imagePath := "static/images/become_a_patron_button.png" }}
-              {{ if (fileExists $imagePath) }}
-                <a href="//patreon.com/join/toby3d" target="_blank">
-                  {{ $config := imageConfig $imagePath }}
-                  <img alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
-                </a>
-              {{ end }}
-            </div>
-          </div>
+          {{ $imagePath := "static/images/become_a_patron_button.png" }}
+          {{ if (fileExists $imagePath) }}
+            <a href="//patreon.com/join/toby3d" target="_blank">
+              {{ $config := imageConfig $imagePath }}
+              <img class="max-width_fifth" alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
+            </a>
+          {{ else }}
+            <h3>{{ i18n "menu_patrons" }}</h3>
+          {{ end }}
           <div class="cluster">
             <ul class="center_text">
               {{ range .patrons }}
@@ -90,7 +86,6 @@
       {{ end }}
     </div>
   </div>
-  <hr>
   <div class="cluster cluster_justify_space-between cluster_align_center">
     <small>
       <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">

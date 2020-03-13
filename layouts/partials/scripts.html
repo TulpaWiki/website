@@ -1,6 +1,6 @@
-{{ $themeSwitcher := resources.Get "/js/theme-switcher.js" }}
-{{ $grid := resources.Get "/js/grid.js" }}
-{{ $reel := resources.Get "/js/reel.js" }}
+{{- $themeSwitcher := resources.Get "js/theme-switcher.js" -}}
+{{- $grid := resources.Get "js/grid.js" -}}
+{{- $reel := resources.Get "js/reel.js" -}}
 {{- $liteYouTube := resources.Get "js/lite-yt-embed.js" -}}
 {{- $scripts := slice $themeSwitcher $grid $reel $liteYouTube | resources.Concat "scripts.js" | minify | fingerprint -}}
 <script src="{{ $scripts.Permalink | relURL }}"></script>

@@ -2,7 +2,8 @@
   --border-width: var(--border-thin);
   --padding: var(--s1);
   padding: var(--padding);
-  border: var(--border-width) solid;
+  border-style: solid;
+  border-width: var(--border-width);
 }
 
 .box * {
@@ -13,6 +14,16 @@
   --padding: 0;
 }
 
-.box_boder_none {
-  border: none;
+.box_border_none {
+  border-style: none;
+}
+
+.box_boder_top {
+  border-top-style: solid;
+  border-top-width: var(--border-width);
+}
+
+.box_boder_bottom {
+  border-bottom-style: solid;
+  border-bottom-width: var(--border-width);
 }

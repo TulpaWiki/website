@@ -7,21 +7,11 @@
   </head>
   <body>
     {{ partial "components/skip-links" . }}
-    <div class="stack">
+    <span class="stack">
       {{ partial "header" . }}
-      {{ if .IsHome }}
-        <div class="cover cover_min-height_30vh">
-          <div class="cover__centered center center_text">
-            <h1>{{ .Site.Title }}</h1>
-            <p>{{ .Site.Params.description }}</p>
-          </div>
-        </div>
-      {{ end }}
-      <main class="center center_padding_gutters" id="main">
-        {{ block "main" . }}{{ end }}
-      </main>
+      {{ block "main" . }}{{ end }}
       {{ partial "footer" . }}
-    </div>
+    </span>
     {{ partial "scripts" . }}
   </body>
 </html>
