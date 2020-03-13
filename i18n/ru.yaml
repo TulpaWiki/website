@@ -33,3 +33,11 @@
   translation: Вероятно, в адресе страницы есть опечатка, страница была перемещена, удалена, либо её никогда не существовало.
 - id: 404__back-link
   translation: Вернуться на главную
+- id: menu_contribute
+  translation: Внести вклад
+- id: menu_contribute__bug
+  translation: Сообщить об ошибке
+- id: menu_contribute__source
+  translation: Исходный код
+- id: menu_contribute__edit
+  translation: Редактировать

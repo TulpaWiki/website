@@ -1,7 +1,19 @@
 <hr>
 <footer id="footer" class="box box_boder_none stack">
-  <div class="switcher switcher_limit_3">
+  <div class="switcher switcher_limit_4">
     <div>
+      <div class="stack">
+        <section class="stack">
+          <h3>{{ i18n "menu_contribute" }}</h3>
+          <nav>
+            <ul>
+              <li><a href="{{ print .Site.Params.repository "-/issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
+              <li><a href="{{ print .Site.Params.repository "-/blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
+              <li><a href="{{ print .Site.Params.repository "-/edit/develop/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
       <div class="stack">
         {{ with .Site.Menus.telegram }}
           <section class="stack">
