@@ -22,14 +22,10 @@ telegram:
     name: Группа
     url: https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA
 discord:
-  - identifier: russian
-    name: Русскоязычный сервер
+  - identifier: general
+    name: Сервер
     title: Официальный русскоязычный сервер в Discord
     url: https://discord.gg/aWfvuXf
-  - identifier: international
-    title: Интернациональный сервер в Discord
-    name: Интернациональный сервер
-    url: https://discord.gg/SmqzMdq
 partners:
   - identifier: tulpa_info
     name: Tulpa.info

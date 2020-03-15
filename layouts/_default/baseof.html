@@ -5,13 +5,11 @@
     <title>{{ println .Page.Title "|" .Site.Title }}</title>
     {{ partial "styles" . }}
   </head>
-  <body>
+  <body class="stack stack_split-after_3">
     {{ partial "components/skip-links" . }}
-    <span class="stack">
-      {{ partial "header" . }}
-      {{ block "main" . }}{{ end }}
-      {{ partial "footer" . }}
-    </span>
+    {{ partial "header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer" . }}
     {{ partial "scripts" . }}
   </body>
 </html>

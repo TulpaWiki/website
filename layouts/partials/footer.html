@@ -8,11 +8,12 @@
             <ul>
               <li><a href="{{ print .Site.Params.repository "-/issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
               <li><a href="{{ print .Site.Params.repository "-/blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
-              <li><a href="{{ print .Site.Params.repository "-/edit/develop/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
+              <li><a href="{{ print .Site.Params.repository "-/edit/master/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
             </ul>
           </nav>
         </section>
       </div>
+      {{- if (or .Site.Menus.telegram .Site.Menus.discord) }}
       <div class="stack">
         {{ with .Site.Menus.telegram }}
           <section class="stack">
@@ -39,6 +40,7 @@
           </section>
         {{ end }}
       </div>
+      {{ end -}}
       <div class="stack">
         {{ with .Site.Menus.partners }}
           <section class="stack">
@@ -66,20 +68,20 @@
           {{ end }}
           <div class="cluster">
             <ul class="center_text">
-              {{ range .patrons }}
+              {{- range .patrons }}
                 <li>
-                  {{ if .link }}<a href="{{ .link }}" title="{{ .name }}" rel="nofollow" target="_blank">{{ end }}
-                  {{ $imagePath := (print "static/images/patrons/" .id ".png") }}
-                  {{ if (and .id (fileExists $imagePath)) }}
-                    {{ $config := imageConfig $imagePath }}
-                    <img alt="{{ .name }}" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
+                  {{- if .link }}<a href="{{- .link -}}" title="{{- .name -}}" rel="nofollow" target="_blank">{{ end -}}
+                  {{- $imagePath := (print "static/images/patrons/" .id ".png") -}}
+                  {{- if (and .id (fileExists $imagePath)) }}
+                    {{- $config := imageConfig $imagePath -}}
+                    <img alt="{{- .name -}}" src="{{- strings.TrimPrefix "static/" $imagePath | absURL -}}" width="{{- $config.Width -}}" height="{{- $config.Height -}}" loading="lazy">
                   {{ else }}
-                    {{ delimit (split .name " ") "<br/>" }}
-                  {{ end }}
-                  {{ if .link }}</a>{{ end }}
+                    <small>{{- delimit (split .name " ") "<br/>" -}}</small>
+                  {{ end -}}
+                  {{- if .link }}</a>{{ end -}}
                 </li>
-              {{ end }}
-              <li><a href="{{ "/donate" | absURL }}">{{ i18n "menu_patrons__add-yourself" }}</a></li>
+              {{ end -}}
+              <li><a href="{{- ($.Site.GetPage "/donate").RelPermalink -}}">{{- i18n "menu_patrons__add-yourself" -}}</a></li>
             </ul>
           </div>
         </section>

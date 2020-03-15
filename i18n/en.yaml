@@ -25,3 +25,19 @@
   translation: Write
 - id: menu_patrons__add-yourself
   translation: You?
+- id: 404__header
+  translation: Oh no!
+- id: 404__sub-header
+  translation: Page not found
+- id: 404__description
+  translation: We couldn’t find the content you were looking for.
+- id: 404__back-link
+  translation: Вернуться на главную
+- id: menu_contribute
+  translation: Contribute
+- id: menu_contribute__bug
+  translation: File a bug
+- id: menu_contribute__source
+  translation: View source code
+- id: menu_contribute__edit
+  translation: Edit this page
