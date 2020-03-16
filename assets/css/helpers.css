@@ -10,12 +10,20 @@
   text-align: left !important;
 }
 
+.max-width_half {
+  max-width: calc(var(--measure) / 2) !important;
+}
+
+.max-width_third {
+  max-width: calc(var(--measure) / 3) !important;
+}
+
 .max-width_quarter {
   max-width: calc(var(--measure) / 4) !important;
 }
 
-.max-width_half {
-  max-width: calc(var(--measure) / 2) !important;
+.max-width_fifth {
+  max-width: calc(var(--measure) / 5) !important;
 }
 
 .height_100\% {

@@ -1,30 +1,30 @@
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{ .Page.Title }}" />
-<meta property="og:url" content="{{ .Page.Permalink | absLangURL }}" />
-{{ with .Page.Description }}<meta property="og:description" content="{{ . }}" />{{ end }}
-<meta property="og:locale" content="{{ .Site.Params.locale }}" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ .Page.Title }}">
+<meta property="og:url" content="{{ .Page.Permalink | absLangURL }}">
+{{ with .Page.Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+<meta property="og:locale" content="{{ .Site.Params.locale }}">
 {{ if .Page.IsTranslated }}{{ range .Page.Translations }}
-  <meta property="og:locale:alternate" content="{{ .Site.Params.locale }}" />
+  <meta property="og:locale:alternate" content="{{ .Site.Params.locale }}">
 {{ end }}{{ end }}
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-{{ with .Page.PublishDate }}<meta property="article:published_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />{{ end }}
-{{ with .Page.Lastmod }}<meta property="article:modified_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />{{ end }}
-{{ with .Page.ExpiryDate }}<meta property="article:expiration_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />{{ end }}
-{{ with .Page.Section }}<meta property="article:section" content="{{ . }}" />{{ end }}
-{{ range .Page.Params.tags }}<meta property="article:tag" content="{{ . }}" />{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ with .Page.PublishDate }}<meta property="article:published_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ with .Page.Lastmod }}<meta property="article:modified_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ with .Page.ExpiryDate }}<meta property="article:expiration_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ with .Page.Section }}<meta property="article:section" content="{{ . }}">{{ end }}
+{{ range .Page.Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
 {{/*
-  <meta property="og:audio" content="" />
-  <meta property="og:audio:secure_url" content="" />
-  <meta property="og:audio:type" content="" />
-  <meta property="og:video" content="" />
-  <meta property="og:video:height" content="" />
-  <meta property="og:video:secure_url" content="" />
-  <meta property="og:video:type" content="" />
-  <meta property="og:video:width" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:image:alt" content="" />
-  <meta property="og:image:height" content="" />
-  <meta property="og:image:secure_url" content="" />
-  <meta property="og:image:type" content="" />
-  <meta property="og:image:width" content="" />
+  <meta property="og:audio" content="">
+  <meta property="og:audio:secure_url" content="">
+  <meta property="og:audio:type" content="">
+  <meta property="og:video" content="">
+  <meta property="og:video:height" content="">
+  <meta property="og:video:secure_url" content="">
+  <meta property="og:video:type" content="">
+  <meta property="og:video:width" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <meta property="og:image:height" content="">
+  <meta property="og:image:secure_url" content="">
+  <meta property="og:image:type" content="">
+  <meta property="og:image:width" content="">
 */}}

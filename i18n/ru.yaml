@@ -21,3 +21,27 @@
   translation:
     one: "источник:"
     other: "источники:"
+- id: contacts__write
+  translation: Написать
+- id: menu_patrons__add-yourself
+  translation: Вы?
+- id: 404__header
+  translation: О нет!
+- id: 404__sub-header
+  translation: Страница не найдена
+- id: 404__description
+  translation: Мы не смогли найти контент который вы искали.
+- id: 404__back-link
+  translation: Вернуться на главную
+- id: 404__create-page
+  translation: Создать страницу
+- id: menu_contribute
+  translation: Внести вклад
+- id: menu_contribute__bug
+  translation: Сообщить об ошибке
+- id: menu_contribute__source
+  translation: Исходный код
+- id: menu_contribute__edit
+  translation: Редактировать
+- id: menu_contribute__blame
+  translation: История изменений

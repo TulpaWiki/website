@@ -2,26 +2,14 @@
 <html lang="{{ .Page.Lang }}">
   <head>
     {{ partial "meta" . }}
-    <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+    <title>{{ println .Page.Title "|" .Site.Title }}</title>
     {{ partial "styles" . }}
   </head>
-  <body>
+  <body class="stack stack_split-after_3">
     {{ partial "components/skip-links" . }}
-    <div class="stack">
-      {{ partial "header" . }}
-      {{ if .IsHome }}
-        <div class="cover cover_min-height_30vh">
-          <div class="cover__centered center center_text">
-            <h1>{{ .Site.Title }}</h1>
-            <p>{{ .Site.Params.description }}</p>
-          </div>
-        </div>
-      {{ end }}
-      <main class="center" id="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-      {{ partial "footer" . }}
-    </div>
+    {{ partial "header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer" . }}
     {{ partial "scripts" . }}
   </body>
 </html>

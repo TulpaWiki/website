@@ -1,6 +1,9 @@
 ---
 patrons:
   - name: Aurielb
-  - name: Ivan Kolesnikov
-    image: /images/patrons/6752979.png
+  - id: 6752979
+    name: Иван Колесников
+  - id: 2561978
+    name: Максим Лебедев
+    link: https://toby3d.me
   - name: Yami Odymel

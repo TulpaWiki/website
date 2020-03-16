@@ -1,7 +1,9 @@
 :root {
   font-family: var(--font-family);
   font-size: calc(var(--s0) + 0.5vw);
+  hyphens: auto;
   line-height: var(--ratio);
+  word-break: break-word;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,7 +33,6 @@ h3,
 h4 {
   font-variation-settings: 'wght' 700;
   font-weight: 700;
-  hyphens: auto;
   line-height: var(--line-height-small);
 }
 
@@ -97,7 +98,9 @@ footer * {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color: transparent;
 }
 
 hr {
@@ -106,36 +109,83 @@ hr {
 }
 
 body {
-  display: flex;
   min-height: 100vh;
-  flex-direction: column;
 }
 
-main {
-  flex: 1 0 auto;
-}
-
-button {
-  -webkit-appearance: none;
+button,
+.button {
   -moz-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 0;
-  background: inherit;
-  color: inherit;
-  padding: 0.5em 1.5em;
-  font-size: inherit;
-  font-family: inherit;
-  min-width: 4.5em;
+  -webkit-appearance: none;
   align-items: center;
-  justify-content: center;
+  appearance: none;
+  background: #4676d7;
+  border-radius: 0;
+  border: 0;
+  color: #ffffff !important;
+  cursor: pointer;
   display: inline-flex;
+  font-family: inherit;
+  font-size: inherit;
+  justify-content: center;
+  min-width: 4.25em;
+  padding: 0.5em 1.5em;
+  text-decoration-line: none;
 }
 
-button:focus {
+button:hover,
+.button:hover {
+  background: #1d49aa;
+}
+
+button:focus,
+.button:focus {
+  box-shadow: 0 0 0 0.25em #cbd6ee;
   outline: none;
 }
 
-button[disabled] {
+button[disabled],
+.button_disabled {
+  background: #6c7589;
+  color: #d2d5db;
   cursor: not-allowed;
+}
+
+button[disabled]:hover,
+.button_disabled:hover {
+  background: #6c7589;
+  box-shadow: none;
+}
+
+button[disabled]:focus,
+.button_disabled:focus {
+  background: #6c7589;
+  box-shadow: none;
+}
+
+a:focus,
+.link:focus {
+  outline: auto 1em Highlight; /* NOTE(toby3d):; non-webkit browsers */
+  outline: auto 2em -webkit-focus-ring-color; /* NOTE(toby3d): webkit browsers */
+}
+
+blockquote {
+  padding: var(--s1);
+  background-color: hsl(0, 0%, 95%);
+  quotes: '“' '”' '‘' '’';
+}
+
+blockquote * {
+  color: inherit;
+}
+
+strong, b {
+  font-variation-settings: 'wght' 600;
+  font-weight: 600;
+  line-height: var(--line-height-small);
+}
+
+code {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 95%);
+  padding: var(--s-5);
 }

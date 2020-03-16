@@ -22,3 +22,23 @@
 .stack_recursive > * + * {
   margin-top: var(--space);
 }
+
+.stack_split-after_1 > :nth-child(1) {
+  margin-bottom: auto;
+}
+
+.stack_split-after_2 > :nth-child(2) {
+  margin-bottom: auto;
+}
+
+.stack_split-after_3 > :nth-child(3) {
+  margin-bottom: auto;
+}
+
+.stack_split-after_4 > :nth-child(4) {
+  margin-bottom: auto;
+}
+
+.stack_split-after_5 > :nth-child(5) {
+  margin-bottom: auto;
+}

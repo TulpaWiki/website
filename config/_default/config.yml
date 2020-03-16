@@ -1,8 +1,9 @@
 ---
 baseURL: https://tulpawiki.gitlab.io/
 canonifyURLs: true
+defaultContentLanguage: ru
 enableEmoji: true
+enableGitInfo: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
 title: TulpaWiki
-defaultContentLanguage: ru

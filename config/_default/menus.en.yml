@@ -1,0 +1,23 @@
+---
+general:
+  - identifier: theory
+    name: Theory
+    url: /en/theory
+  - identifier: practice
+    name: Practice
+    url: /en/practice
+  - identifier: glossary
+    name: Glossary
+    url: /en/glossary
+  - identifier: sources
+    name: Sources
+    url: /en/sources
+partners:
+  - identifier: tulpa_info
+    name: Tulpa.info
+    title: The main international resource about the phenomenon
+    url: https://tulpa.info/
+  - identifier: deskchan
+    name: DeskChan
+    title: Personal digital assistant with character customization
+    url: https://deskchan.info/

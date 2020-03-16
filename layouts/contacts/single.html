@@ -1,0 +1,29 @@
+{{- define "main" }}
+  <main class="center center_padding_gutters" id="main" role="main">
+    <article class="stack">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}{{ . }}{{ end }}
+      <div class="stack">
+        {{ range .Page.Resources.Match (print "*." .Language ".md") }}
+          <div class="box cluster cluster_justify_space-between cluster_align_center">
+            <div>
+              {{ if .Params.image }}
+                {{ $image := $.Page.Resources.GetMatch .Params.image }}
+                <span>
+                  <img alt="{{ .Params.name }}" src="{{ $image.Permalink | absURL }}" width="64" height="64" loading="lazy">
+                </span>
+              {{ end }}
+              <span>
+                <h3>{{ .Params.name }}</h3>
+                {{ with .Params.role }}<p>{{ . }}</p>{{ end }}
+              </span>
+              {{ with .Params.mail }}
+                <a class="button" href="mailto:{{ . }}">{{ i18n "contacts__write" }}</a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+{{ end -}}

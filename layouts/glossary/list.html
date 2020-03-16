@@ -1,19 +1,19 @@
 {{ define "main" }}
-  {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
-  {{ $numbers := split "0123456789" ""}}
-  <article class="stack">
-    <h1 class="center">{{ .Title }}</h1>
-    {{ with .Content }}{{ . }}{{ end }}
-    <div class="cluster">
-      <ul class="list-style_none">
-        <li><a href="#_">0-9</a></li>
-        {{ range $letters }}
-          <li><a href="#{{ . | lower }}">{{ . }}</a></li>
-        {{ end }}
-      </ul>
-    </div>
-    <div class="switcher switcher_limit_5">
-      <div>
+  <main class="center center_padding_gutters" id="main" role="main">
+    {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+    {{ $numbers := split "0123456789" ""}}
+    <article class="stack">
+      <h1 class="center">{{ .Title }}</h1>
+      {{ with .Content }}{{ . }}{{ end }}
+      <div class="cluster">
+        <ul class="list-style_none">
+          <li><a href="#_">0-9</a></li>
+          {{ range $letters }}
+            <li><a href="#{{ . | lower }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="grid js-grid" style="--minimum: 7.5rem">
         {{ range $i, $number := $numbers }}
           {{ $pages := slice }}
           {{ range $.Pages.ByTitle }}
@@ -27,7 +27,7 @@
               <hr/>
               <ul class="list-style_none">
                 {{ range $pages }}
-                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                  <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
               </ul>
             </div>
@@ -47,13 +47,13 @@
               <hr/>
               <ul class="list-style_none">
                 {{ range $pages }}
-                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                  <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
               </ul>
             </div>
           {{ end }}
         {{ end }}
       </div>
-    </div>
-  </article>
+    </article>
+  </main>
 {{ end }}

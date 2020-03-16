@@ -14,7 +14,10 @@ img:not([src*=".svg"]) {
   filter: invert(calc(var(--filter) * 1%));
 }
 
-.theme-switcher {
-  color: #ffffff;
-  background-color: #000000;
+.button_type_theme-switcher {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.button_type_theme-switcher:hover {
+  background-color: hsl(0, 0%, 5%);
 }
