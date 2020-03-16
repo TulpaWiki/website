@@ -1,13 +1,13 @@
 {{- define "main" }}
   <main class="center center_padding_gutters" id="main" role="main">
     <article class="stack">
-      <h1>{{ .Title }}</h1>
-      {{ if .Params.sources }}
+      <h1>{{- .Title -}}</h1>
+      {{- if .Params.sources }}
         <small>
           {{ partial "components/sources-list" . }}
         </small>
-      {{ end }}
-      {{ with .Content }}{{ . }}{{ end }}
+      {{ end -}}
+      {{- with .Content }}{{ . }}{{ end -}}
     </article>
   </main>
 {{ end -}}

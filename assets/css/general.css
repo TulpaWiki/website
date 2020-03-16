@@ -167,3 +167,25 @@ a:focus,
   outline: auto 1em Highlight; /* NOTE(toby3d):; non-webkit browsers */
   outline: auto 2em -webkit-focus-ring-color; /* NOTE(toby3d): webkit browsers */
 }
+
+blockquote {
+  padding: var(--s1);
+  background-color: hsl(0, 0%, 95%);
+  quotes: '“' '”' '‘' '’';
+}
+
+blockquote * {
+  color: inherit;
+}
+
+strong, b {
+  font-variation-settings: 'wght' 600;
+  font-weight: 600;
+  line-height: var(--line-height-small);
+}
+
+code {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 95%);
+  padding: var(--s-5);
+}

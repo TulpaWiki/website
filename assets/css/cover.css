@@ -26,7 +26,7 @@
 }
 
 .cover_no-padding {
-  padding: 0;
+  --space: 0;
 }
 
 .cover_min-height_25vh {

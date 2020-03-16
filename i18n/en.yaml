@@ -41,3 +41,5 @@
   translation: View source code
 - id: menu_contribute__edit
   translation: Edit this page
+- id: menu_contribute__blame
+  translation: Changes history

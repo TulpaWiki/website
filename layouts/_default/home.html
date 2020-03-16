@@ -1,14 +1,11 @@
 {{- define "main" }}
-  <div class="cover cover_min-height_30vh">
-    <div class="cover__centered center center_text stack">
-      {{- if .Site.Params.description }}
-        <hgroup>
-          <h1>{{ .Site.Title }}</h1>
-          <h2>{{ .Site.Params.description }}</h2>
-        </hgroup>
-      {{- else -}}
-        <h1>{{ .Site.Title }}</h1>
-      {{ end -}}
+  <div class="cover cover_min-height_50vh">
+    <div class="cover__centered center center_text stack" style="min-width: 50%">
+      <span class="cover__centered frame frame_ratio_40:13">
+        {{ $config := imageConfig "static/images/logo.png" }}
+        <img src="{{ "images/logo.png" | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="{{ .Site.Title }}" loading="lazy">
+      </span>
+      {{- with .Site.Params.description }}<p>{{ . }}</p>{{ end -}}
     </div>
   </div>
   <main class="center center_padding_gutters" id="main" role="main">

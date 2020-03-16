@@ -41,3 +41,5 @@
   translation: Исходный код
 - id: menu_contribute__edit
   translation: Редактировать
+- id: menu_contribute__blame
+  translation: История изменений
