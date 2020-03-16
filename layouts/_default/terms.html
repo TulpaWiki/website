@@ -5,9 +5,7 @@
       {{ with .Content }}{{ . }}{{ end }}
       <ul class="stack">
         {{ range .Data.Pages }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </article>
