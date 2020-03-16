@@ -33,6 +33,8 @@
   translation: We couldn’t find the content you were looking for.
 - id: 404__back-link
   translation: Вернуться на главную
+- id: 404__create-page
+  translation: Create page
 - id: menu_contribute
   translation: Contribute
 - id: menu_contribute__bug

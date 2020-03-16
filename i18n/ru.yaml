@@ -30,9 +30,11 @@
 - id: 404__sub-header
   translation: Страница не найдена
 - id: 404__description
-  translation: Вероятно, в адресе страницы есть опечатка, страница была перемещена, удалена, либо её никогда не существовало.
+  translation: Мы не смогли найти контент который вы искали.
 - id: 404__back-link
   translation: Вернуться на главную
+- id: 404__create-page
+  translation: Создать страницу
 - id: menu_contribute
   translation: Внести вклад
 - id: menu_contribute__bug
