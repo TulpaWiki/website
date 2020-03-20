@@ -1,4 +1,5 @@
 ---
+type: guide
 title: 12-тидневный гайд
 date: 2019-12-29
 sources:

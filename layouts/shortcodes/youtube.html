@@ -1,5 +1,4 @@
 {{- $id := .Get "id" | default (.Get 0) -}}
-{{- $class := .Get "class" | default (.Get 1) -}}
 <div class="frame frame_ratio_16:9">
   <lite-youtube videoid="{{ $id }}" />
 </div>
