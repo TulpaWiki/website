@@ -164,7 +164,7 @@ button[disabled]:focus,
 
 a:focus,
 .link:focus {
-  outline: auto 1em Highlight; /* NOTE(toby3d):; non-webkit browsers */
+  outline: auto 1em Highlight; /* NOTE(toby3d): non-webkit browsers */
   outline: auto 2em -webkit-focus-ring-color; /* NOTE(toby3d): webkit browsers */
 }
 
@@ -185,7 +185,12 @@ strong, b {
 }
 
 code {
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(70, 8.1%, 14.5%);
   color: hsl(0, 0%, 95%);
   padding: var(--s-5);
+}
+
+pre {
+  background-color: hsl(70, 8.1%, 14.5%);
+  padding: var(--s1);
 }
