@@ -1,0 +1,33 @@
+.sidebar {
+  --space: var(--s1);
+  --content-minimum-width: 50%;
+  --side-width: inherit;
+  overflow: hidden;
+}
+
+.sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.sidebar > * > * {
+  margin: calc(var(--space) / 2);
+  flex-grow: 1;
+}
+
+.sidebar_side-width {
+  flex-basis: var(--side-width);
+}
+
+.sidebar_side_left > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(var(--content-minimum-width) - var(--space));
+}
+
+.sidebar_side_right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(var(--content-minimum-width) - var(--space));
+}

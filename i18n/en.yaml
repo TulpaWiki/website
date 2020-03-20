@@ -1,0 +1,47 @@
+---
+- id: menu_discord
+  translation: Discord
+- id: menu_telegram
+  translation: Telegram
+- id: menu_partners
+  translation: Partners
+- id: menu_patrons
+  translation: Patrons
+- id: theme_dark
+  translation: Dark theme
+- id: theme_light
+  translation: Light theme
+- id: skip_header
+  translation: Skip to header
+- id: skip_main
+  translation: Skip to content
+- id: skip_footer
+  translation: Skip to footer
+- id: sources
+  translation:
+    one: "source:"
+    other: "sources:"
+- id: contacts__write
+  translation: Write
+- id: menu_patrons__add-yourself
+  translation: You?
+- id: 404__header
+  translation: Oh no!
+- id: 404__sub-header
+  translation: Page not found
+- id: 404__description
+  translation: We couldn’t find the content you were looking for.
+- id: 404__back-link
+  translation: Вернуться на главную
+- id: 404__create-page
+  translation: Create page
+- id: menu_contribute
+  translation: Contribute
+- id: menu_contribute__bug
+  translation: File a bug
+- id: menu_contribute__source
+  translation: View source code
+- id: menu_contribute__edit
+  translation: Edit this page
+- id: menu_contribute__blame
+  translation: Changes history

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Lang }}">
+  <head>
+    {{ partial "meta" . }}
+    <title>{{ println .Page.Title "|" .Site.Title }}</title>
+    {{ partial "styles" . }}
+  </head>
+  <body class="stack stack_split-after_3">
+    {{ partial "components/skip-links" . }}
+    {{ partial "header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

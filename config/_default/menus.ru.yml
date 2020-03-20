@@ -1,0 +1,37 @@
+---
+general:
+  # - identifier: theory
+  #   name: Теория
+  #   url: /theory
+  # - identifier: practice
+  #   name: Практика
+  #   url: /practice
+  - identifier: glossary
+    name: Глоссарий
+    url: /glossary
+  - identifier: sources
+    name: Источники
+    url: /sources
+telegram:
+  - identifier: channel
+    name: Канал
+    title: Официальный новостной канал в Telegram
+    url: https://t.me/joinchat/AAAAAEvXyxFnlVmZhEYbEA
+  - identifier: group
+    title: Официальная русскоязычная группа в Telegram
+    name: Группа
+    url: https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA
+discord:
+  - identifier: general
+    name: Сервер
+    title: Официальный русскоязычный сервер в Discord
+    url: https://discord.gg/aWfvuXf
+partners:
+  - identifier: tulpa_info
+    name: Tulpa.info
+    title: Главный интернациональный ресурс о феномене
+    url: https://tulpa.info/
+  - identifier: deskchan
+    name: DeskChan
+    title: Персональный цифровой ассистент с кастомизацией характера
+    url: https://deskchan.info/

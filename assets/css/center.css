@@ -1,0 +1,23 @@
+.center {
+  --max: var(--measure);
+  --gutters: var(--s1);
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max);
+}
+
+.center_text {
+  text-align: center;
+}
+
+.center_intrinsic {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.center_padding_gutters {
+  padding-left: var(--gutters);
+  padding-right: var(--gutters);
+}

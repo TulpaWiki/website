@@ -1,0 +1,8 @@
+{{- with .Params.sources }}
+  <b>{{- println ":label:" (i18n "sources" (len .) | title) | emojify -}}</b>
+  {{- range . }}
+    {{- with $.Site.GetPage (print "sources/" (. | urlize)) }}
+      <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
+    {{ end -}}
+  {{ end -}}
+{{ end -}}

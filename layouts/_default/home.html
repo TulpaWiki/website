@@ -1,0 +1,16 @@
+{{- define "main" }}
+  <div class="cover cover_min-height_50vh">
+    <div class="cover__centered center center_text stack" style="min-width: 50%">
+      <span class="cover__centered frame frame_ratio_40:13">
+        {{ $config := imageConfig "static/images/logo.png" }}
+        <img src="{{ "images/logo.png" | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="{{ .Site.Title }}" loading="lazy">
+      </span>
+      {{- with .Site.Params.description }}<p>{{ . }}</p>{{ end -}}
+    </div>
+  </div>
+  <main class="center center_padding_gutters" id="main" role="main">
+    <article class="stack">
+      {{ with .Content }}{{ . }}{{ end }}
+    </article>
+  </main>
+{{ end -}}

@@ -1,0 +1,14 @@
+{{- define "main" }}
+  <main class="center center_padding_gutters" id="main" role="main">
+    <article class="stack">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}{{ . }}{{ end }}
+      <ul>
+        {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </article>
+  </main>
+  {{ partial "components/pagination" . }}
+{{ end -}}

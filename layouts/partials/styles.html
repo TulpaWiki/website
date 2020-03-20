@@ -1,0 +1,22 @@
+{{- $fonts := resources.Get "css/fonts.css" -}}
+{{- $variables := resources.Get "css/variables.css" -}}
+{{- $general := resources.Get "css/general.css" -}}
+{{- $switcher := resources.Get "css/switcher.css" -}}
+{{- $center := resources.Get "css/center.css" -}}
+{{- $cover := resources.Get "css/cover.css" -}}
+{{- $stack := resources.Get "css/stack.css" -}}
+{{- $box := resources.Get "css/box.css" -}}
+{{- $grid := resources.Get "css/grid.css" -}}
+{{- $sidebar := resources.Get "css/sidebar.css" -}}
+{{- $cluster := resources.Get "css/cluster.css" -}}
+{{- $frame := resources.Get "css/frame.css" -}}
+{{- $reel := resources.Get "css/reel.css" -}}
+{{- $imposter := resources.Get "css/imposter.css" -}}
+{{- $helpers := resources.Get "css/helpers.css" -}}
+{{- $themeSwitcher := resources.Get "css/theme-switcher.css" -}}
+{{- $skipLinks := resources.Get "css/skip-links.css" -}}
+{{- $liteYouTube := resources.Get "css/lite-yt-embed.css" | minify | fingerprint -}}
+{{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube | resources.Concat "styles.css" | minify | fingerprint -}}
+<link href="{{ "/fonts/inter.ttf" | relURL }}" crossorigin="anonymous" rel="preload" type="font/ttf" as="font">
+<link href="{{ $styles.Permalink | relURL }}" rel="stylesheet" media="print" type="text/css" as="style" onload="this.onload=null;this.media='all'">
+<noscript><link href="{{ $styles.Permalink | relURL }}" rel="stylesheet" media="all" type="text/css" as="style"></noscript>

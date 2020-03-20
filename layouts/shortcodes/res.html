@@ -1,0 +1,4 @@
+{{ $name := .Get 0 }}
+{{- with .Page.Resources.GetMatch $name }}
+  {{ .RelPermalink }}
+{{ end -}}

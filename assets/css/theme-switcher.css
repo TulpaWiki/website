@@ -1,0 +1,23 @@
+:root {
+  --filter: 0;
+  background-color: #fefefe;
+  filter: invert(calc(var(--filter) * 1%));
+}
+
+* {
+  background-color: inherit;
+}
+
+video,
+iframe,
+img:not([src*=".svg"]) {
+  filter: invert(calc(var(--filter) * 1%));
+}
+
+.button_type_theme-switcher {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.button_type_theme-switcher:hover {
+  background-color: hsl(0, 0%, 5%);
+}

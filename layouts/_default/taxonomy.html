@@ -1,0 +1,18 @@
+{{- define "main" }}
+  <main class="center center_padding_gutters" id="main" role="main">
+    <article class="stack">
+      <h1>
+        {{- with .Params.website }}<a href="{{ . }}" rel="nowollow" target="_blank">{{ end -}}
+        {{ .Title }}
+        {{- if .Params.website}}</a>{{ end -}}
+      </h1>
+      {{ with .Content }}{{ . }}{{ end }}
+      <ul class="stack">
+        {{ range .Data.Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </article>
+  </main>
+  {{ partial "components/pagination" . }}
+{{ end -}}

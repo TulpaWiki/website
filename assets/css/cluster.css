@@ -1,0 +1,46 @@
+.cluster {
+  --space: var(--s0);
+  --justify: flex-start;
+  --align: center;
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(--justify);
+  align-items: var(--align);
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+.cluster_align_left {
+  --align: flex-start;
+}
+
+.cluster_align_center {
+  --align: center;
+}
+
+.cluster_align_right {
+  --align: flex-end;
+}
+
+.cluster_justify_start {
+  --justify: flex-start;
+}
+
+.cluster_justify_end {
+  --justify: flex-end;
+}
+
+.cluster_justify_space-between {
+  --justify: space-between;
+}
+
+.cluster_justify_space-around {
+  --justify: space-around;
+}

@@ -1,0 +1,13 @@
+<header class="box box_border_none box_boder_bottom" id="header" style="--space: 0">
+  <nav class="cluster cluster_justify_space-between cluster_align_center" role="navigation">
+    <ul>
+      {{- $homePage := .Site.GetPage "/" -}}
+      <li><a href="{{- $homePage.RelPermalink -}}" title="{{ $homePage.Title }}">{{ .Site.Title }}</a></li>
+      <li><ul class="reel js-reel">
+        {{- range .Site.Menus.general }}
+          <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+        {{ end -}}
+      </ul></li>
+    </ul>
+  </nav>
+</header>
