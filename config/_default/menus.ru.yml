@@ -1,11 +1,11 @@
 ---
 general:
-  - identifier: theory
-    name: Теория
-    url: /theory
-  - identifier: practice
-    name: Практика
-    url: /practice
+  # - identifier: theory
+  #   name: Теория
+  #   url: /theory
+  # - identifier: practice
+  #   name: Практика
+  #   url: /practice
   - identifier: glossary
     name: Глоссарий
     url: /glossary
