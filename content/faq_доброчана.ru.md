@@ -1,6 +1,5 @@
 ---
 type: guide
-slug: dobrochan-faq
 title: F.A.Q. Доброчана
 date: 2019-12-29
 sources:

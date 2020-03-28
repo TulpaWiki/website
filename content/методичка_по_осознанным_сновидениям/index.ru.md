@@ -1,6 +1,5 @@
 ---
 type: guide
-slug: lucid-dreaming-book
 title: Методичка по осознанным сновидениям
 date: 2019-12-29
 sources:
