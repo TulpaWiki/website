@@ -1,3 +1,12 @@
+---
+type: guide
+title: Продвинутый визуальный контроль
+date: 2020-03-31
+sources:
+  - dreamviews
+aliases:
+  - /ru/Продвинутый_визуальный_контроль
+---
 ## Продвинутый визуальный контроль
 <i>Данный материал родом с форума, посвященного осознанным сновидениям (ОС) — прим. переводчика.</i>
 
@@ -40,7 +49,7 @@
 
 Надеюсь, эта информация окажется кому-то полезной.
 
-<font color="red">Mylynes</font>
+Mylynes
 
 ## Ссылки
 * https://www.dreamviews.com/dream-control/80879-advanced-vision-control-tutorial.html
