@@ -1,22 +1,18 @@
 {{- $paginator := .Paginator -}}
 {{- if gt $paginator.TotalPages 1 }}
-  <nav class="box box_border_none center cluster cluster_justify_space-between">
-    <ul>
-      {{- with $paginator.First }}
-        <li><a href="{{ .URL }}"><span aria-hidden="true">&laquo;&laquo;</span></a></li>
-      {{ end -}}
-      {{- if $paginator.HasPrev }}
-        <li><a href="{{ $paginator.Prev.URL }}">&laquo;</a></li>
-      {{ end -}}
-      {{- range $paginator.Pagers }}
-        <li><a href="{{ if eq . $paginator }}#!{{ else }}{{ .URL }}{{ end }}">{{ .PageNumber }}</a></li>
-      {{ end -}}
-      {{- if $paginator.HasNext }}
-        <li><a href="{{ $paginator.Next.URL }}">&raquo;</a></li>
-      {{ end -}}
-      {{- with $paginator.Last }}
-        <li><a href="{{ .URL }}"><span aria-hidden="true">&raquo;&raquo;</span></a></li>
-      {{ end -}}
-    </ul>
+  <nav class="cluster cluster_justify_space-between">
+    <span>
+      <span>{{- i18n "pagination__state" $paginator -}}</span>
+      <div class="cluster">
+        <span>
+          {{- if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}">&#11104; {{ i18n "pagination__prev" | title -}}</a>
+          {{ end -}}
+          {{- if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}">{{- i18n "pagination__next" | title }} &#11106;</a>
+          {{ end -}}
+        </span>
+      </div>
+    </span>
   </nav>
 {{ end -}}

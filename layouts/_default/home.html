@@ -8,9 +8,26 @@
       {{- with .Site.Params.description }}<p>{{ . }}</p>{{ end -}}
     </div>
   </div>
-  <main class="center center_padding_gutters" id="main" role="main">
+  <main class="stack center center_padding_gutters" id="main" role="main">
     <article class="stack">
-      {{ with .Content }}{{ . }}{{ end }}
+      <span class="center center_text">
+        {{ with .Content }}{{ . | emojify }}{{ end }}
+      </span>
+      <ul class="cards stack">
+        {{ range (.Paginate (where .Site.Pages "Type" "==" "guide")).Pages }}
+          <li class="cards__card card box">
+            <div class="card__image"></div>
+            <div class="card__text stack">
+              <h3>
+                <a href="{{ .Permalink }}">{{- .Title -}}</a>
+              </h3>
+              {{- with .Description }}<p>{{- . -}}</p>{{ end -}}
+              <small>{{ .Date.Format "February 02, 2006" }}</small>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
     </article>
+    {{ partial "components/pagination" . }}
   </main>
 {{ end -}}

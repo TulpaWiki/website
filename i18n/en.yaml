@@ -45,3 +45,11 @@
   translation: Edit this page
 - id: menu_contribute__blame
   translation: Changes history
+- id: pagination__state
+  translation: Page {{ .PageNumber }} of {{ .TotalPages }}
+- id: pagination__prev
+  translation: newer
+- id: pagination__next
+  translation: older
+- id: license
+  translation: license

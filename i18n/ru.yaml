@@ -45,3 +45,11 @@
   translation: Редактировать
 - id: menu_contribute__blame
   translation: История изменений
+- id: pagination__state
+  translation: Страница {{ .PageNumber }} из {{ .TotalPages }}
+- id: pagination__prev
+  translation: новее
+- id: pagination__next
+  translation: старше
+- id: license
+  translation: лицензия
