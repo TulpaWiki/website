@@ -3,6 +3,8 @@ title: История изменений
 description: Человекопонятный список последних изменений
 ---
 ## [Не опубликовано]
+
+## [0.2.0] - 2020/03/31
 ### Добавлено
 + Источник: [life of a wolfy]({{< ref "/sources/shinyuu" >}})
 + Гайд: [Секс—в чем вопрос?]({{< ref "/секс_в_чем_вопрос" >}})
@@ -43,5 +45,6 @@ description: Человекопонятный список последних и
 + Cписок сообществ, спонсоров и партнёров [в подвале](#footer)
 + Переключатель "тёмной темы" [в подвале](#footer)
 
-[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.1.0...develop
+[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.2.0...develop
+[0.2.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.2.0
 [0.1.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.1.0
