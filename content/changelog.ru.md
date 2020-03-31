@@ -16,6 +16,7 @@ description: Человекопонятный список последних и
 + Гайд: [Полугайд одной мысли (или двух)]({{< ref "/полугайд_одной_мысли_или_двух" >}})
 + Гайд: [Абсолютный Гайд]({{< ref "/kiahdajs_absolute_guide_to_tulpas" >}})
 + Источник: [Tulpa.info]({{< ref "/sources/tulpa.info" >}})
++ Поддержка лицензий [Creative Commons](https://creativecommons.org)
 
 ### Изменено
 * Заголовок и текст [страницы о пожертвованиях]({{< ref "/donate" >}})

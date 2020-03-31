@@ -51,3 +51,5 @@
   translation: newer
 - id: pagination__next
   translation: older
+- id: license
+  translation: license

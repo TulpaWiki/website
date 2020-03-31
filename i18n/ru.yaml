@@ -51,3 +51,5 @@
   translation: новее
 - id: pagination__next
   translation: старше
+- id: license
+  translation: лицензия
