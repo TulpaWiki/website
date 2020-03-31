@@ -4,7 +4,7 @@ title: Абсолютный Гайд
 draft: false
 date: 2019-12-29
 sources:
-  - info.info
+  - tulpa.info
 aliases:
   - /ru/kiahdajs_absolute_guide_to_tulpas
 ---

@@ -3,7 +3,7 @@
     {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
     {{ $numbers := split "0123456789" ""}}
     <article class="stack">
-      <h1 class="center">{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
       {{ with .Content }}{{ . }}{{ end }}
       <div class="cluster">
         <ul class="list-style_none">

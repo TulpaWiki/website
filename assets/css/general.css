@@ -194,3 +194,7 @@ pre {
   background-color: hsl(70, 8.1%, 14.5%);
   padding: var(--s1);
 }
+
+.cards {
+  list-style: none;
+}
