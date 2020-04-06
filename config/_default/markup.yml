@@ -1,0 +1,3 @@
+goldmark:
+  extensions:
+    footnote: true
