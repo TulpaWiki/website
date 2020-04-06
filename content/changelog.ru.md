@@ -54,6 +54,6 @@ description: Человекопонятный список последних и
 + Cписок сообществ, спонсоров и партнёров [в подвале](#footer)
 + Переключатель "тёмной темы" [в подвале](#footer)
 
-[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.2.0...develop
+[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.2.0...master
 [0.2.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.2.0
 [0.1.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.1.0
