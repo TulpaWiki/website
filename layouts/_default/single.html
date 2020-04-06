@@ -3,12 +3,14 @@
     <article class="stack">
       <header>
         <h1>{{- .Title -}}</h1>
-        {{- if .Params.sources }}
-          <span>{{ partial "components/sources-list" . }}</span>
-        {{ end -}}
+        <span class="cluster">
+          <span>
+            <span>{{ partial "components/sources-list" . }}</span>
+            <span>{{ partial "components/license" . }}</span>
+          </span>
+        </span>
       </header>
       {{- with .Content }}{{ . }}{{ end -}}
-      {{ partial "components/license" . }}
     </article>
   </main>
 {{ end -}}

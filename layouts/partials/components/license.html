@@ -1,12 +1,12 @@
 {{ with .Params.license }}
-  <h2>{{- i18n "license" | title -}}</h2>
+  <b>{{- println ":copyright:" (i18n "license" | title) | emojify -}}</b>
   {{- $parts := split . "-" -}}
   <a href="http://creativecommons.org/licenses/{{ . }}/4.0/" rel="license">
-    Creative Commons
-    {{ if (in . "by") }}Attribution{{ end }}
-    {{- if (in . "nc") }}-NonCommercial{{ end }}
-    {{- if (in . "sa") }}-ShareAlike{{ end }}
-    {{- if (in . "nd") }}-NoDerivs{{ end }}
-    4.0 International
+    CC
+    {{ if (in . "by") }}BY{{ end }}
+    {{- if (in . "nc") }}-NC{{ end }}
+    {{- if (in . "sa") }}-SA{{ end }}
+    {{- if (in . "nd") }}-ND{{ end }}
+    4.0
   </a>
 {{ end }}
