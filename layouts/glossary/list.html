@@ -2,8 +2,10 @@
   <main class="center center_padding_gutters" id="main">
     {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
     {{ $numbers := split "0123456789" ""}}
-    <article class="stack">
+    <header>
       <h1>{{ .Title }}</h1>
+    </header>
+    <article class="stack">
       {{ with .Content }}{{ . }}{{ end }}
       <div class="cluster">
         <ul class="list-style_none">

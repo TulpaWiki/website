@@ -1,15 +1,15 @@
 {{- define "main" }}
-  <main class="center center_padding_gutters" id="main">
-    <article class="stack">
-      <header>
-        <h1>{{- .Title -}}</h1>
-        <span class="cluster">
-          <span>
-            <span>{{ partial "components/sources-list" . }}</span>
-            <span>{{ partial "components/license" . }}</span>
-          </span>
+  <main class="center center_padding_gutters stack" id="main">
+    <header>
+      <h1>{{- .Title -}}</h1>
+      <small class="cluster">
+        <span>
+          <span>{{ partial "components/sources-list" . }}</span>
+          <span>{{ partial "components/license" . }}</span>
         </span>
-      </header>
+      </small>
+    </header>
+    <article class="stack">
       {{- with .Content }}{{ . }}{{ end -}}
     </article>
   </main>
