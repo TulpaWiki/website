@@ -1,5 +1,5 @@
 <header class="box box_border_none box_boder_bottom" id="header" style="--space: 0">
-  <nav class="cluster cluster_justify_space-between cluster_align_center" role="navigation">
+  <nav class="cluster cluster_justify_space-between cluster_align_center">
     <ul>
       {{- $homePage := .Site.GetPage "/" -}}
       <li><a href="{{- $homePage.RelPermalink -}}" title="{{ $homePage.Title }}">{{ .Site.Title }}</a></li>

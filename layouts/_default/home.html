@@ -8,11 +8,11 @@
       {{- with .Site.Params.description }}<p>{{ . }}</p>{{ end -}}
     </div>
   </div>
-  <main class="stack center center_padding_gutters" id="main" role="main">
+  <main class="stack center center_padding_gutters" id="main">
     <article class="stack">
-      <span class="center center_text">
+      <div class="center center_text">
         {{ with .Content }}{{ . | emojify }}{{ end }}
-      </span>
+      </div>
       <ul class="cards stack">
         {{ range (.Paginate (where .Site.Pages "Type" "==" "guide")).Pages }}
           <li class="cards__card card box">
