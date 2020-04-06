@@ -6,6 +6,9 @@ description: Человекопонятный список последних и
 ### Добавлено
 + Микрокод: [vimeo]({{< ref "/help/shortcodes/vimeo" >}})
 
+### Изменено
+* Идентификатор превью микрокода [youtube]({{< ref "/help/shortcodes/youtube" >}})
+
 ## [0.2.0] - 2020/03/31
 ### Добавлено
 + Источник: [life of a wolfy]({{< ref "/sources/shinyuu" >}})
