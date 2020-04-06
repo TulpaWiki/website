@@ -23,4 +23,4 @@ resources:
 ## Ссылки
 * [Книга в формате DocX]({{< res "book" >}})
 * [Google Docs](https://docs.google.com/document/d/1Xh_S2Zo2MHgkO3W0synfHpdPDXTn5lyS5-5aClgG0GU/view)
-* [Перевод](http://eclairhouse.tumblr.com/translation)
+* [Перевод](https://eclairhouse.tumblr.com/translation)
