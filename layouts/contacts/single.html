@@ -6,20 +6,27 @@
     <article class="stack">
       {{ with .Content }}{{ . }}{{ end }}
       <div class="stack">
-        {{ range .Page.Resources.Match (print "*." .Language ".md") }}
+        {{ range $index, $contact := .Params.contacts }}
           <div class="box cluster cluster_justify_space-between cluster_align_center">
-            <div>
-              {{ if .Params.image }}
-                {{ $image := $.Page.Resources.GetMatch .Params.image }}
-                <span>
-                  <img alt="{{ .Params.name }}" src="{{ $image.Permalink | absURL }}" width="64" height="64" loading="lazy">
-                </span>
-              {{ end }}
+            <div itemscope itemtype="http://schema.org/Person">
+              {{ $image := $.Page.Resources.GetMatch (print $contact.image) }}
+              {{- if $image }}
+                <img alt="{{ $contact.name }}" src="{{ $image.RelPermalink }}" width="64" height="64" loading="lazy" itemprop="image">
+              {{ end -}}
               <span>
-                <h3>{{ .Params.name }}</h3>
-                {{ with .Params.role }}<p>{{ . }}</p>{{ end }}
+                {{- if (and $contact.givenName $contact.familyName) }}
+                  <h3>
+                    <span itemprop="givenName">{{ $contact.givenName }}</span>
+                    <span itemprop="familyName">{{ $contact.familyName }}</span>
+                  </h3>
+                {{ else if $contact.name }}
+                  <h3 itemprop="name">{{ $contact.name }}</h3>
+                {{ end -}}
+                {{- with $contact.jobTitle }}
+                  <p itemprop="jobTitle">{{ . }}</p>
+                {{ end -}}
               </span>
-              {{ with .Params.mail }}
+              {{ with $contact.email }}
                 <a class="button" href="mailto:{{ . }}">{{ i18n "contacts__write" }}</a>
               {{ end }}
             </div>
