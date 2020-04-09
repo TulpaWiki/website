@@ -1,8 +1,8 @@
 <meta name="telegram:title" content="{{ .Page.Title }}">
-{{/* <meta name="telegram:subtitle" content=""> */}}
-{{ with .Page.Section }}<meta name="telegram:kicker" content="{{ . }}">{{ end }}
-{{ with .Page.PublishDate }}<meta name="telegram:published_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
-{{ with .Page.Description }}<meta name="telegram:description" content="{{ . }}">{{ end }}
-{{/* <meta name="telegram:image_url" content=""> */}}
-{{/* <meta name="telegram:document_url" content=""> */}}
-{{ with .Site.Title }}<meta name="telegram:site_name" content="{{ . }}">{{ end }}
+{{- /* <meta name="telegram:subtitle" content=""> */ -}}
+{{- with .Page.Section }}<meta name="telegram:kicker" content="{{ . }}">{{ end -}}
+{{- with .Page.PublishDate }}<meta name="telegram:published_date" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end -}}
+{{- with .Page.Description }}<meta name="telegram:description" content="{{ . }}">{{ end -}}
+{{- /* <meta name="telegram:image_url" content=""> */ -}}
+{{- /* <meta name="telegram:document_url" content=""> */ -}}
+{{- with .Site.Title }}<meta name="telegram:site_name" content="{{ . }}">{{ end -}}

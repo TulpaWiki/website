@@ -17,12 +17,12 @@
       </div>
       <div class="grid js-grid" style="--minimum: 7.5rem">
         {{ range $i, $number := $numbers }}
-          {{ $pages := slice }}
-          {{ range $.Pages.ByTitle }}
-            {{ if hasPrefix .Name $number }}
-              {{ $pages = $pages | append . }}
-            {{ end }}
-          {{ end }}
+          {{- $pages := slice -}}
+          {{- range $.Pages.ByTitle -}}
+            {{- if hasPrefix .Name $number -}}
+              {{- $pages = $pages | append . -}}
+            {{- end -}}
+          {{- end -}}
           {{ if gt $pages 0 }}
             <div class="stack">
               <h2 id="_">0-9</h2>
@@ -37,12 +37,12 @@
         {{ end }}
 
         {{ range $i, $letter := $letters }}
-          {{ $pages := slice }}
-          {{ range $.Pages.ByTitle }}
-            {{ if hasPrefix .Name $letter }}
-              {{ $pages = $pages | append . }}
-            {{ end }}
-          {{ end }}
+          {{- $pages := slice -}}
+          {{- range $.Pages.ByTitle -}}
+            {{- if hasPrefix .Name $letter -}}
+              {{- $pages = $pages | append . -}}
+            {{- end -}}
+          {{- end -}}
           {{ if gt $pages 0 }}
             <div class="stack">
               <h2 id="{{ $letter | lower }}">{{ $letter | upper }}</h2>

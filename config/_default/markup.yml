@@ -1,3 +1,4 @@
+---
 defaultMarkdownHandler: goldmark
 goldmark:
   extensions:

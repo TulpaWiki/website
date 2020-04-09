@@ -6,10 +6,16 @@
           <h3>{{ i18n "menu_contribute" }}</h3>
           <nav>
             <ul>
-              <li><a href="{{ print .Site.Params.repository "-/issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
-              <li><a href="{{ print .Site.Params.repository "-/blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
-              <li><a href="{{ print .Site.Params.repository "-/blame/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__blame" }}" target="_blank">{{ i18n "menu_contribute__blame" }}</a></li>
-              <li><a href="{{ print .Site.Params.repository "-/edit/master/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
+              <li><a href="{{ print .Site.Params.repository "issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
+              {{- if .Page.File }}
+                <li><a href="{{ print .Site.Params.repository "blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
+              {{ end -}}
+              {{- if .Page.File }}
+                <li><a href="{{ print .Site.Params.repository "blame/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__blame" }}" target="_blank">{{ i18n "menu_contribute__blame" }}</a></li>
+              {{ end -}}
+              {{- if .Page.File }}
+                <li><a href="{{ print .Site.Params.repository "edit/master/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
+              {{ end -}}
               <li>
                 {{- $helpPage := .Site.GetPage "/help" -}}
                 <a href="{{- $helpPage.RelPermalink -}}" title="{{- $helpPage.Description -}}">{{- $helpPage.Title -}}</a>
@@ -62,11 +68,11 @@
       </div>
       {{ with .Site.Data.patrons }}
         <section class="stack">
-          {{ $imagePath := "static/images/become_a_patron_button.png" }}
+          {{- $imagePath := "static/images/become_a_patron_button.png" -}}
           {{ if (fileExists $imagePath) }}
             <a href="//patreon.com/join/toby3d" target="_blank">
-              {{ $config := imageConfig $imagePath }}
-              <img class="max-width_fifth" alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | absURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
+              {{- $config := imageConfig $imagePath -}}
+              <img class="max-width_fifth" alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
             </a>
           {{ else }}
             <h3>{{ i18n "menu_patrons" }}</h3>
@@ -79,7 +85,7 @@
                   {{- $imagePath := (print "static/images/patrons/" .id ".png") -}}
                   {{- if (and .id (fileExists $imagePath)) }}
                     {{- $config := imageConfig $imagePath -}}
-                    <img alt="{{- .name -}}" src="{{- strings.TrimPrefix "static/" $imagePath | absURL -}}" width="{{- $config.Width -}}" height="{{- $config.Height -}}" loading="lazy">
+                    <img alt="{{- .name -}}" src="{{- strings.TrimPrefix "static/" $imagePath | relURL -}}" width="{{- $config.Width -}}" height="{{- $config.Height -}}" loading="lazy">
                   {{ else }}
                     <small>{{- delimit (split .name " ") "<br/>" -}}</small>
                   {{ end -}}
@@ -96,7 +102,7 @@
   <div class="cluster cluster_justify_space-between cluster_align_center">
     <small>
       <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
-        &#127279; {{ now.Format "2006" }} {{ .Site.Title }}
+        {{ println "&#127279;" (now.Format "2006") .Site.Title | safeHTML }}
       </a>
       {{ partial "components/theme-switcher" . }}
     </small>

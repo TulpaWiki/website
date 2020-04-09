@@ -9,7 +9,7 @@
         {{ range $index, $contact := .Params.contacts }}
           <div class="box cluster cluster_justify_space-between cluster_align_center">
             <div itemscope itemtype="http://schema.org/Person">
-              {{ $image := $.Page.Resources.GetMatch (print $contact.image) }}
+              {{- $image := $.Page.Resources.GetMatch (print $contact.image) -}}
               {{- if $image }}
                 <img alt="{{ $contact.name }}" src="{{ $image.RelPermalink }}" width="64" height="64" loading="lazy" itemprop="image">
               {{ end -}}

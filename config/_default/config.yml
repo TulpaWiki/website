@@ -1,5 +1,5 @@
 ---
-baseURL: https://tulpawiki.gitlab.io/
+baseURL: https://tulpawiki.org/
 canonifyURLs: true
 defaultContentLanguage: ru
 enableEmoji: true
