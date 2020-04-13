@@ -2,7 +2,10 @@
 title: История изменений
 description: Человекопонятный список последних изменений
 ---
-## [Не опубликовано]
+## [Новое]
+### Изменено
+* Раздел "Не опубликовано" истории изменений переименован в "Новое", ввиду перехода в [режим GitHub Flow](https://guides.github.com/introduction/flow/)
+
 ### Удалено
 - Предложение о справке про продвинутую работу с Git при отсутсвии соответствующей страницы помощи на [странице помощи для новичков]({{< ref "/help/beginner" >}}) :shrug:
 
@@ -82,7 +85,7 @@ description: Человекопонятный список последних и
 + Cписок сообществ, спонсоров и партнёров [в подвале](#footer)
 + Переключатель "тёмной темы" [в подвале](#footer)
 
-[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.3.0...master
+[Новое]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.3.0...master
 [0.3.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/-/tags/v0.3.0
 [0.2.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/-/tags/v0.2.0
 [0.1.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/-/tags/v0.1.0
