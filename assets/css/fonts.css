@@ -3,5 +3,5 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/inter.ttf') format('truetype');
+  src: url('{{ (resources.Get "fonts/inter.ttf").RelPermalink }}') format('truetype');
 }

@@ -2,14 +2,6 @@
 {{- $grid := resources.Get "js/grid.js" -}}
 {{- $reel := resources.Get "js/reel.js" -}}
 {{- $liteYouTube := resources.Get "js/lite-yt-embed.js" -}}
-{{- $scripts := slice $themeSwitcher $grid $reel $liteYouTube | resources.Concat "scripts.js" | minify | fingerprint -}}
-<script src="{{ $scripts.Permalink | relURL }}"></script>
-<script>
-  new app.ThemeSwitcher({
-    target: document.querySelector('.js-theme-switcher'),
-    props: {
-      enabledLabel: {{ i18n "theme_dark" }},
-      disabledLabel: {{ i18n "theme_light" }}
-    }
-  });
-</script>
+{{- $liteVimeo := resources.Get "js/lite-vimeo-embed.js" -}}
+{{- $scripts := slice $themeSwitcher $grid $reel $liteVimeo $liteYouTube | resources.Concat "scripts.js" | resources.ExecuteAsTemplate (print "script." .Lang ".js" ) . | minify | fingerprint -}}
+<script src="{{ $scripts.RelPermalink | relURL }}"></script>

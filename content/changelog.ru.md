@@ -4,6 +4,41 @@ description: Человекопонятный список последних и
 ---
 ## [Не опубликовано]
 
+## [0.3.0] - 2020/04/14
+### Добавлено
++ Микрокод: [vimeo]({{< ref "/help/shortcodes/vimeo" >}})
++ Поддержка сносок
++ Поддержка таблиц
++ Поддержка зачёркиваний
++ Гайд: [Наногайд]({{< ref "/наногайд_сагр-4" >}})
++ Гайд: [Продвинутый визуальный контроль]({{< ref "/advanced_vision_control" >}})
++ Гайд: [Гайд по самостоятельности от Aarix]({{< ref "/aarix_independence" >}})
++ Гайд: [24-часовой гайд]({{< ref "/24_hours_guide" >}})
++ Гайд: [Вопросы для тульп (альтернативная версия)]({{< ref "/112вопросов" >}})
++ Гайд: [Как создать тульпу]({{< ref "/8ch_infographic" >}})
++ Гайд: [Краткий гайд по созданию собственного мыследемона]({{< ref "/8ch_mind_demon" >}})
++ Гайд: [Небольшой гайд по монологам]({{< ref "/a_bit_of_narration_guide" >}})
++ Гайд: [Вера и логическое мышление]({{< ref "/belief_and_logical_thinking" >}})
++ Гайд: [Дом Памяти — строим воображаемый дом для работы с памятью]({{< ref "/building_a_memory_house" >}})
++ Гайд: [Детская философия]({{< ref "/child_philosophy" >}})
++ Гайд: [Чистка мозгового кэша]({{< ref "/чистка_мозгового_кэша" >}})
++ Гайд: [Что такое Тульпа?! \[FAQ man\]]({{< ref "/что_такое_тульпа_faq_man" >}})
++ Гайд: [Форс себя к тульпе]({{< ref "/форс_себя_к_тульпе" >}})
++ Гайд: [Ни черта не видно?]({{< ref "/chupi_cant_see" >}})
++ Гайд: [Гайд по вондеру]({{< ref "/vonderguide" >}})
++ Гайд: [Советы по форсингу]({{< ref "/8ch_tulpa_tips" >}})
++ Гайд: [Минигайд от Chupi]({{< ref "/chupi_miniguide" >}})
++ Гайд: [Тренировка разделения]({{< ref "/separation_exercise" >}})
++ Гайд: [Различия между нами и тульпами]({{< ref "/the_differences_between_us_and_tulpae" >}})
++ Гайд: [Перевод гайда по голосу или на западе упадок]({{< ref "/the_voice" >}})
++ Гайд: [The "Self I Spy" Game — играем вместе с тульпой]({{< ref "/the_self_i_spy_game" >}})
++ Гайд: [Ванный форсинг]({{< ref "/ванная" >}})
++ Источник: [Инфинитач]({{< ref "/sources/8ch" >}})
+
+### Изменено
+* Идентификатор превью микрокода [youtube]({{< ref "/help/shortcodes/youtube" >}})
+* Премещён блок отображения лицензии
+
 ## [0.2.0] - 2020/03/31
 ### Добавлено
 + Источник: [life of a wolfy]({{< ref "/sources/shinyuu" >}})
@@ -45,6 +80,7 @@ description: Человекопонятный список последних и
 + Cписок сообществ, спонсоров и партнёров [в подвале](#footer)
 + Переключатель "тёмной темы" [в подвале](#footer)
 
-[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.2.0...develop
+[Не опубликовано]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/compare/v0.3.0...master
+[0.3.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.3.0
 [0.2.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.2.0
 [0.1.0]: https://gitlab.com/tulpawiki/tulpawiki.gitlab.io/releases/-/tags/v0.1.0

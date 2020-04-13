@@ -1,0 +1,7 @@
+---
+defaultMarkdownHandler: goldmark
+goldmark:
+  extensions:
+    footnote: true
+    table: true
+    strikethrough: true

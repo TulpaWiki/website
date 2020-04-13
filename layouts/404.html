@@ -14,15 +14,15 @@
       </hgroup>
       <!-- <div class="frame">
         <video autoplay loop muted playsinline>
-          <source src="{{ "/video/glitch.av1.mp4" | absURL }}" type="video/mp4; codecs=av1.0.05M.08" />
-          <source src="{{ "/video/glitch.h264.mp4" | absURL }}" type="video/mp4" />
+          <source src="{{ "/video/glitch.av1.mp4" | relURL }}" type="video/mp4; codecs=av1.0.05M.08" />
+          <source src="{{ "/video/glitch.h264.mp4" | relURL }}" type="video/mp4" />
         </video>
       </div> -->
       <p>{{ i18n "404__description" }}</p>
       <div class="cluster cluster_align_center cluster_justify_space-around">
         <div>
-          <a href="{{ .Site.BaseURL | relURL }}" target="_self">{{ i18n "404__back-link" }}</a>
-          <a href="{{ print .Site.Params.repository "-/new/develop/" | relURL }}" target="_blank">{{ i18n "404__create-page" }}</a>
+          <a href="{{ "/" | relURL }}" target="_self">{{ i18n "404__back-link" }}</a>
+          <a href="{{ print .Site.Params.repository "-/new/master/" | relURL }}" target="_blank">{{ i18n "404__create-page" }}</a>
         </div>
       </div>
     </main>

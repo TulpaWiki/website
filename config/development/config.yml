@@ -1,4 +1,4 @@
 ---
-baseURL: http://localhost:1313/
+baseURL: http://127.0.0.1:1313/
 disableLiveReload: false
 watch: true

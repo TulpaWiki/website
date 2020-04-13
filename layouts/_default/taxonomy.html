@@ -1,11 +1,13 @@
 {{- define "main" }}
-  <main class="center center_padding_gutters" id="main" role="main">
-    <article class="stack">
+  <main class="center center_padding_gutters stack" id="main">
+    <header>
       <h1>
         {{- with .Params.website }}<a href="{{ . }}" rel="nowollow" target="_blank">{{ end -}}
         {{ .Title }}
         {{- if .Params.website}}</a>{{ end -}}
       </h1>
+    </header>
+    <article class="stack">
       {{ with .Content }}{{ . }}{{ end }}
       <ul class="stack">
         {{ range .Data.Pages }}
