@@ -1,11 +1,11 @@
 ---
 type: guide
 title: Гайд по самостоятельности от Aarix
-date: 2020-03-31
+date: 2019-12-29
 sources:
   - tulpa.info
 aliases:
-  - /ru/Гайд_по_самостоятельности_от_Aarix
+  - /ru/aarix_independence
 ---
 ## Гайд по самостоятельности от Aarix
 
