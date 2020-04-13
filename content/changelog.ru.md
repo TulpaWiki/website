@@ -27,6 +27,7 @@ description: Человекопонятный список последних и
 + Гайд: [Советы по форсингу]({{< ref "/8ch_tulpa_tips" >}})
 + Гайд: [Минигайд от Chupi]({{< ref "/chupi_miniguide" >}})
 + Гайд: [Тренировка разделения]({{< ref "/separation_exercise" >}})
++ Гайд: [Различия между нами и тульпами]({{< ref "/the_differences_between_us_and_tulpae" >}})
 + Источник: [Инфинитач]({{< ref "/sources/8ch" >}})
 
 ### Изменено
