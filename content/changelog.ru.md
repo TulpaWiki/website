@@ -18,6 +18,7 @@ description: Человекопонятный список последних и
 + Гайд: [Небольшой гайд по монологам]({{< ref "/a_bit_of_narration_guide" >}})
 + Гайд: [Вера и логическое мышление]({{< ref "/belief_and_logical_thinking" >}})
 + Гайд: [Дом Памяти — строим воображаемый дом для работы с памятью]({{< ref "/building_a_memory_house" >}})
++ Гайд: [Детская философия]({{< ref "/child_philosophy" >}})
 
 ### Изменено
 * Идентификатор превью микрокода [youtube]({{< ref "/help/shortcodes/youtube" >}})
