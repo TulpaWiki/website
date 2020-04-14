@@ -2,7 +2,7 @@
 type: guide
 date: 2019-12-29
 draft: false
-title: The \"Self I Spy\" Game — играем вместе с тульпой
+title: The "Self I Spy" Game — играем вместе с тульпой
 sources:
   - tulpa.info
 aliases:
