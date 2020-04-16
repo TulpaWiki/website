@@ -198,3 +198,9 @@ pre {
 .cards {
   list-style: none;
 }
+
+.logo {
+  text-decoration: none;
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
+}

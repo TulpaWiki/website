@@ -2,7 +2,7 @@
   <nav class="cluster cluster_justify_start cluster_align_center">
     <ul>
       {{- $homePage := .Site.GetPage "/" -}}
-      <li><a href="{{- $homePage.RelPermalink -}}" title="{{ $homePage.Title }}">{{ .Site.Title }}</a></li>
+      <li><a class="logo" href="{{- $homePage.RelPermalink -}}" title="{{ $homePage.Title }}">{{ .Site.Title }}</a></li>
       {{- range .Site.Menus.general }}
         <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
       {{ end -}}
