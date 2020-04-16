@@ -1,0 +1,16 @@
+.search__input {
+  --padding: var(--s-1);
+}
+
+.search__results {
+  position: absolute;
+  z-index: 1;
+}
+
+.search__results_hidden {
+  display: none;
+}
+
+.result_result {
+  text-decoration: none;
+}

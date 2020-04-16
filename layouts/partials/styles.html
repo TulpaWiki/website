@@ -17,7 +17,8 @@
 {{- $skipLinks := resources.Get "css/skip-links.css" -}}
 {{- $liteYouTube := resources.Get "css/lite-yt-embed.css" -}}
 {{- $liteVimeo := resources.Get "css/lite-vimeo-embed.css" -}}
-{{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo | resources.Concat "styles.css" | minify | fingerprint -}}
+{{- $search := resources.Get "css/search.css" -}}
+{{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
 <link href="{{ (resources.Get "fonts/inter.ttf").RelPermalink }}" crossorigin="preload anonymous" rel="preload" type="font/ttf" as="font">
 <link href="{{ $styles.RelPermalink | relURL }}" rel="preload stylesheet" media="print" type="text/css" as="style" onload="this.onload=null;this.media='all'">
 <noscript><link href="{{ $styles.RelPermalink | relURL }}" rel="preload stylesheet" media="all" type="text/css" as="style"></noscript>

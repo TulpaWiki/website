@@ -53,3 +53,5 @@
   translation: older
 - id: license
   translation: license
+- id: search
+  translation: Search...

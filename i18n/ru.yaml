@@ -53,3 +53,5 @@
   translation: старше
 - id: license
   translation: лицензия
+- id: search
+  translation: Поиск...
