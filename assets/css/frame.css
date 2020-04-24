@@ -45,3 +45,8 @@
   --denominator: 40;
   --numerator: 13;
 }
+
+.frame_ratio_5\:4 {
+  --denominator: 5;
+  --numerator: 4;
+}
