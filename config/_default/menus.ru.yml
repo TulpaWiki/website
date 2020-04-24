@@ -21,6 +21,10 @@ telegram:
     title: Официальная русскоязычная группа в Telegram
     name: Группа
     url: https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA
+  - identifier: stickers
+    title: Тематический набор стикеров
+    name: Набор стикеров
+    url: https://t.me/addstickers/TulpaWiki
 discord:
   - identifier: general
     name: Сервер
