@@ -13,10 +13,6 @@ general:
     name: Источники
     url: /sources
 telegram:
-  - identifier: channel
-    name: Канал
-    title: Официальный новостной канал в Telegram
-    url: https://t.me/joinchat/AAAAAEvXyxFnlVmZhEYbEA
   - identifier: group
     title: Официальная русскоязычная группа в Telegram
     name: Группа
