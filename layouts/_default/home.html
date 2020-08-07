@@ -21,7 +21,13 @@
               <h3>
                 <a href="{{ .Permalink }}">{{- .Title -}}</a>
               </h3>
-              {{- with .Description }}<p>{{- . -}}</p>{{ end -}}
+              <p>
+                {{- if .Description -}}
+                  {{ .Description }}
+                {{- else if .Summary -}}
+                  {{- .Summary | safeHTML | truncate 140 "..." -}}
+                {{- end -}}
+              </p>
               <small>{{ .Date.Format "February 02, 2006" }}</small>
             </div>
           </li>
