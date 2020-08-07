@@ -2,7 +2,7 @@
   <main class="center center_padding_gutters stack" id="main">
     <header>
       <h1>
-        {{- with .Params.website }}<a href="{{ . }}" rel="nowollow" target="_blank">{{ end -}}
+        {{- with .Params.website }}<a rel="noopener noreferrer" href="{{ . }}" target="_blank">{{ end -}}
         {{ .Title }}
         {{- if .Params.website}}</a>{{ end -}}
       </h1>

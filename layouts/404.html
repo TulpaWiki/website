@@ -5,6 +5,7 @@
     {{ partial "meta" . }}
     <title>{{ println ":scream:" (i18n "404__header") "|" .Site.Title | emojify }}</title>
     {{ partial "styles" . }}
+    <link rel="prefetch" as="image" href="images/404.jpg">
   </head>
   <body class="cover cover_min-height_100vh">
     <main class="cover__centered center center_text stack">
@@ -19,7 +20,7 @@
       <div class="cluster cluster_align_center cluster_justify_space-around">
         <div>
           <a href="{{ "/" | relURL }}" target="_self">{{ i18n "404__back-link" }}</a>
-          <a href="{{ print .Site.Params.repository "new/master/" | relURL }}" target="_blank">{{ i18n "404__create-page" }}</a>
+          <a rel="noopener noreferrer" href="{{ print .Site.Params.repository "new/master/" | relURL }}" target="_blank">{{ i18n "404__create-page" }}</a>
         </div>
       </div>
     </main>

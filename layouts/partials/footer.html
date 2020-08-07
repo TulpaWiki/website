@@ -6,15 +6,15 @@
           <h3>{{ i18n "menu_contribute" }}</h3>
           <nav>
             <ul>
-              <li><a href="{{ print .Site.Params.repository "issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
+              <li><a rel="noopener noreferrer" href="{{ print .Site.Params.repository "issues/new" | absURL }}" title="{{ i18n "menu_contribute__bug" }}" target="_blank">{{ i18n "menu_contribute__bug" }}</a></li>
               {{- if .Page.File }}
-                <li><a href="{{ print .Site.Params.repository "blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
+                <li><a rel="noopener noreferrer" href="{{ print .Site.Params.repository "blob/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__source" }}" target="_blank">{{ i18n "menu_contribute__source" }}</a></li>
               {{ end -}}
               {{- if .Page.File }}
-                <li><a href="{{ print .Site.Params.repository "blame/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__blame" }}" target="_blank">{{ i18n "menu_contribute__blame" }}</a></li>
+                <li><a rel="noopener noreferrer" href="{{ print .Site.Params.repository "blame/master/content/" .Page.File.Path | absURL }}" title="{{ i18n "menu_contribute__blame" }}" target="_blank">{{ i18n "menu_contribute__blame" }}</a></li>
               {{ end -}}
               {{- if .Page.File }}
-                <li><a href="{{ print .Site.Params.repository "edit/master/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
+                <li><a rel="noopener noreferrer" href="{{ print .Site.Params.repository "edit/master/content/" .Page.File.Path }}" title="{{ i18n "menu_contribute__edit" }}" target="_blank">{{ i18n "menu_contribute__edit" }}</a></li>
               {{ end -}}
               <li>
                 {{- $helpPage := .Site.GetPage "/help" -}}
@@ -32,7 +32,7 @@
             <nav>
               <ul>
                 {{ range . }}
-                  <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                  <li><a rel="noopener noreferrer" href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
                 {{ end }}
               </ul>
             </nav>
@@ -44,7 +44,7 @@
             <nav>
               <ul>
                 {{ range . }}
-                  <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                  <li><a rel="noopener noreferrer" href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
                 {{ end }}
               </ul>
             </nav>
@@ -59,7 +59,7 @@
             <nav>
               <ul>
                 {{ range . }}
-                  <li><a href="{{ .URL }}" title="{{ .Title }}" rel="nofollow" target="_blank">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
+                  <li><a rel="noopener noreferrer" href="{{ .URL }}" title="{{ .Title }}" rel="nofollow" target="_blank">{{ .Pre }}{{ .Name }}{{ .Post }}</a></li>
                 {{ end }}
               </ul>
             </nav>
@@ -70,7 +70,7 @@
         <section class="stack">
           {{- $imagePath := "static/images/become_a_patron_button.png" -}}
           {{ if (fileExists $imagePath) }}
-            <a href="//patreon.com/join/toby3d" target="_blank">
+            <a rel="noopener noreferrer" href="https://patreon.com/join/toby3d" target="_blank">
               {{- $config := imageConfig $imagePath -}}
               <img class="max-width_fifth" alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
             </a>
@@ -81,7 +81,7 @@
             <ul class="center_text">
               {{- range .patrons }}
                 <li>
-                  {{- if .link }}<a href="{{- .link -}}" title="{{- .name -}}" rel="nofollow" target="_blank">{{ end -}}
+                  {{- if .link }}<a rel="noopener noreferrer" href="{{- .link -}}" title="{{- .name -}}" target="_blank">{{ end -}}
                   {{- $imagePath := (print "static/images/patrons/" .id ".png") -}}
                   {{- if (and .id (fileExists $imagePath)) }}
                     {{- $config := imageConfig $imagePath -}}
@@ -101,7 +101,7 @@
   </div>
   <div class="cluster cluster_justify_space-between cluster_align_center">
     <small>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
+      <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
         {{ println "&#127279;" (now.Format "2006") .Site.Title | safeHTML }}
       </a>
       <span class="js-theme-switcher"></span>

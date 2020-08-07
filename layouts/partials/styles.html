@@ -19,6 +19,8 @@
 {{- $liteVimeo := resources.Get "css/lite-vimeo-embed.css" -}}
 {{- $search := resources.Get "css/search.css" -}}
 {{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
+{{ if .IsHome }}<link rel="prefetch" as="image" href="images/logo.png">{{ end }}
+<link rel="prefetch" as="image" href="images/become_a_patron_button.png">
 <link rel="prefetch" as="font" crossorigin type="font/ttf" href="{{ (resources.Get "fonts/inter.ttf").RelPermalink }}">
 <link rel="preload" as="style" href="{{ $styles.RelPermalink | relURL }}" type="text/css" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
