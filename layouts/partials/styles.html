@@ -19,6 +19,8 @@
 {{- $liteVimeo := resources.Get "css/lite-vimeo-embed.css" -}}
 {{- $search := resources.Get "css/search.css" -}}
 {{- $styles := slice $fonts $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
-<link href="{{ (resources.Get "fonts/inter.ttf").RelPermalink }}" crossorigin="preload anonymous" rel="preload" type="font/ttf" as="font">
-<link href="{{ $styles.RelPermalink | relURL }}" rel="preload stylesheet" media="print" type="text/css" as="style" onload="this.onload=null;this.media='all'">
-<noscript><link href="{{ $styles.RelPermalink | relURL }}" rel="preload stylesheet" media="all" type="text/css" as="style"></noscript>
+<link rel="prefetch" as="font" crossorigin type="font/ttf" href="{{ (resources.Get "fonts/inter.ttf").RelPermalink }}">
+<link rel="preload" as="style" href="{{ $styles.RelPermalink | relURL }}" type="text/css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" as="style" href="{{ $styles.RelPermalink | relURL }}" type="text/css">
+</noscript>

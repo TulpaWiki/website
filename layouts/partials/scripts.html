@@ -5,4 +5,4 @@
 {{- $liteVimeo := resources.Get "js/lite-vimeo-embed.js" -}}
 {{- $search := resources.Get "js/search.js" -}}
 {{- $scripts := slice $themeSwitcher $grid $reel $liteVimeo $liteYouTube $search | resources.Concat "scripts.js" | resources.ExecuteAsTemplate (print "script." .Lang ".js" ) . | minify | fingerprint -}}
-<script src="{{ $scripts.RelPermalink | relURL }}"></script>
+<script src="{{ $scripts.RelPermalink | relURL }}" async defer></script>
