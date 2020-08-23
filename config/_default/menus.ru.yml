@@ -12,6 +12,9 @@ general:
   - identifier: sources
     name: Источники
     url: /sources
+  - identifier: contacts
+    name: Контакты
+    url: /contacts
 telegram:
   - identifier: group
     title: Официальная русскоязычная группа в Telegram

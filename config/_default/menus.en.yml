@@ -12,6 +12,9 @@ general:
   - identifier: sources
     name: Sources
     url: /en/sources
+  - identifier: contacts
+    name: Contacts
+    url: /en/contacts
 partners:
   - identifier: tulpa_info
     name: Tulpa.info
