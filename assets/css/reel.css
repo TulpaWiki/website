@@ -1,14 +1,9 @@
 .reel {
-  --item-width: auto;
-  --space: var(--s1);
-  --height: auto;
-  --track-color: #000000;
-  --thumb-color: #ffffff;
   display: flex;
-  height: var(--height);
+  height: var(--reel-height);
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-color: var(--thumb-color) var(--track-color);
+  scrollbar-color: var(--reel-thumb-color) var(--reel-track-color);
 }
 
 .reel::-webkit-scrollbar {
@@ -17,15 +12,15 @@
 
 .reel::-webkit-scrollbar-track,
 .reel::-webkit-scrollbar-thumb {
-  background-color: var(--track-color);
+  background-color: var(--reel-track-color);
 }
 
 .reel::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(var(--track-color) 0, var(--track-color) 0.25rem, var(--thumb-color) 0.25rem, var(--thumb-color) 0.75rem, var(--track-color) 0.75rem);
+  background-image: linear-gradient(var(--reel-track-color) 0, var(--reel-track-color) 0.25rem, var(--reel-thumb-color) 0.25rem, var(--reel-thumb-color) 0.75rem, var(--reel-track-color) 0.75rem);
 }
 
 .reel > * {
-  flex: 0 0 var(--item-width);
+  flex: 0 0 var(--reel-item-width);
 }
 
 .reel > img {
@@ -35,9 +30,9 @@
 }
 
 .reel > * + * {
-  margin-left: var(--space);
+  margin-left: var(--reel-space);
 }
 
 .reel_overflowing {
-  padding-bottom: var(--space);
+  padding-bottom: var(--reel-space);
 }

@@ -1,15 +1,13 @@
 .cover {
-  --space: 0;
-  --min-height: 0;
   display: flex;
   flex-direction: column;
-  min-height: var(--min-height);
-  padding: var(--space);
+  min-height: var(--cover-min-height);
+  padding: var(--cover-space);
 }
 
 .cover > * {
-  margin-top: var(--space);
-  margin-bottom: var(--space);
+  margin-top: var(--cover-space);
+  margin-bottom: var(--cover-space);
 }
 
 .cover > :first-child:not(.cover__centered) {
@@ -26,25 +24,25 @@
 }
 
 .cover_no-padding {
-  --space: 0;
+  --cover-space: 0;
 }
 
 .cover_min-height_25vh {
-  --min-height: 25vh;
+  --cover-min-height: 25vh;
 }
 
 .cover_min-height_30vh {
-  --min-height: 30vh;
+  --cover-min-height: 30vh;
 }
 
 .cover_min-height_50vh {
-  --min-height: 50vh;
+  --cover-min-height: 50vh;
 }
 
 .cover_min-height_75vh {
-  --min-height: 75vh;
+  --cover-min-height: 75vh;
 }
 
 .cover_min-height_100vh {
-  --min-height: 100vh;
+  --cover-min-height: 100vh;
 }

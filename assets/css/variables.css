@@ -17,4 +17,28 @@
   --line-height-small: calc(var(--ratio) * 0.8);
   --border-thin: var(--s-5);
   --border-thick: var(--s-2);
+  --center-gutters: var(--s1);
+  --center-max: var(--measure);
+  --cluster-align: center;
+  --cluster-justify: flex-start;
+  --cluster-space: var(--s0);
+  --cover-min-height: 0;
+  --cover-space: 0;
+  --frame-denominator: 16;
+  --frame-numerator: 9;
+  --grid-minimum: 15rem;
+  --grid-space: var(--s1);
+  --imposter-margin: 0px;
+  --imposter-position: absolute;
+  --reel-height: auto;
+  --reel-item-width: auto;
+  --reel-space: var(--s1);
+  --reel-thumb-color: #ffffff;
+  --reel-track-color: #000000;
+  --sidebar-content-minimum-width: 50%;
+  --sidebar-side-width: inherit;
+  --sidebar-space: var(--s1);
+  --stack-space: var(--s0);
+  --switcher-space: var(--s1);
+  --switcher-threshold: var(--measure);
 }

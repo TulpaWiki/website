@@ -1,8 +1,6 @@
 .frame {
-  --denominator: 16;
-  --numerator: 9;
-  aspect-ratio: var(--denominator) / var(--numerator);
-  padding-bottom: calc(var(--numerator) / var(--denominator) * 100%);
+  aspect-ratio: var(--frame-denominator) / var(--frame-numerator);
+  padding-bottom: calc(var(--frame-numerator) / var(--frame-denominator) * 100%);
   position: relative;
 }
 
@@ -27,26 +25,26 @@
 }
 
 .frame_ratio_16\:9 {
-  --denominator: 16;
-  --numerator: 9;
+  --frame-denominator: 16;
+  --frame-numerator: 9;
 }
 
 .frame_ratio_1\:1 {
-  --denominator: 1;
-  --numerator: 1;
+  --frame-denominator: 1;
+  --frame-numerator: 1;
 }
 
 .frame_ratio_4\:1 {
-  --denominator: 4;
-  --numerator: 1;
+  --frame-denominator: 4;
+  --frame-numerator: 1;
 }
 
 .frame_ratio_40\:13 {
-  --denominator: 40;
-  --numerator: 13;
+  --frame-denominator: 40;
+  --frame-numerator: 13;
 }
 
 .frame_ratio_5\:4 {
-  --denominator: 5;
-  --numerator: 4;
+  --frame-denominator: 5;
+  --frame-numerator: 4;
 }

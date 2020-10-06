@@ -1,6 +1,6 @@
 {{- $paginator := .Paginator -}}
 {{- if gt $paginator.TotalPages 1 }}
-  <nav class="cluster cluster_justify_space-between">
+  <nav class="[ cluster ][ cluster_justify_space-between ]">
     <span>
       <span>{{- i18n "pagination__state" $paginator -}}</span>
       <div class="cluster">

@@ -1,7 +1,8 @@
+{{ $inter := resources.Get "fonts/inter.ttf" }}
 @font-face {
   font-display: swap;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('{{ (resources.Get "fonts/inter.ttf").RelPermalink }}') format('truetype');
+  src: url('{{ $inter.RelPermalink }}') format('truetype');
 }

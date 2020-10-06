@@ -1,0 +1,4 @@
+{{ partial "styles" . }}
+{{ partial "meta" . }}
+<link rel="canonical" href="{{ .Page.Permalink | absLangURL }}">
+<title>{{ println .Page.Title "|" .Site.Title }}</title>

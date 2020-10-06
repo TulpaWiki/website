@@ -1,5 +1,4 @@
 .stack {
-  --space: var(--s0);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,7 +10,7 @@
 }
 
 .stack > * + * {
-  margin-top: var(--space);
+  margin-top: var(--stack-space);
 }
 
 .stack_recursive > * {
@@ -20,7 +19,11 @@
 }
 
 .stack_recursive > * + * {
-  margin-top: var(--space);
+  margin-top: var(--stack-space);
+}
+
+.stack:only-child {
+  height: 100%;
 }
 
 .stack_split-after_1 > :nth-child(1) {
@@ -41,4 +44,8 @@
 
 .stack_split-after_5 > :nth-child(5) {
   margin-bottom: auto;
+}
+
+.stack_space_0 {
+  --stack-space: 0;
 }
