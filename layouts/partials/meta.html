@@ -6,9 +6,14 @@
 <meta name="description" content="{{ .Page.Description }}">
 <meta name="referrer" content="origin-when-crossorigin">
 <meta name="theme-color" content="#00cfff">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ with .GitInfo -}}<meta name="author" content="{{ .AuthorName }}">{{- end }}
-{{ with .Page.Params.tags -}}<meta name="keywords" content="{{ delimit . "," }}">{{- end }}
+{{ with .GitInfo }}
+  <meta name="author" content="{{ .AuthorName }}">
+{{ end }}
+{{ with .Page.Params.tags }}
+  <meta name="keywords" content="{{ delimit . "," }}">
+{{ end }}
 {{ hugo.Generator }}
 {{ partial "meta/open-graph" . }}
 {{ partial "meta/twitter" . }}

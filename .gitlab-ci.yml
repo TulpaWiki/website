@@ -17,7 +17,7 @@ test:
 
 pages:
   stage: deploy
-  script: hugo
+  script: hugo --minify
   artifacts:
     paths:
       - public

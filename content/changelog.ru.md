@@ -23,7 +23,9 @@ description: Человекопонятный список последних и
 ### Изменено
 * Раздел "Не опубликовано" истории изменений переименован в "Новое", ввиду перехода в [режим GitHub Flow](https://guides.github.com/introduction/flow/)
 * Пункты меню перемещены с правой части навигации в левую
-* Исправления на основе [замечаний Lighthouse](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Ftulpawiki.org)
+
+## Исправлено
+* [Замечания Lighthouse](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Ftulpawiki.org)
 
 ### Удалено
 - Предложение о справке про продвинутую работу с Git при отсутсвии соответствующей страницы помощи на [странице помощи для новичков]({{< ref "/help/beginner" >}}) :shrug:
