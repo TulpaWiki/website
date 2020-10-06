@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="center center_padding_gutters" id="main">
     {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
-    {{ $numbers := split "0123456789" ""}}
+    {{ $numbers := split "0123456789" "" }}
     <header>
       <h1>{{ .Title }}</h1>
     </header>
@@ -9,9 +9,9 @@
       {{ with .Content }}{{ . }}{{ end }}
       <div class="cluster">
         <ul class="list-style_none">
-          <li><a href="#_">0-9</a></li>
+          <li><a href="{{ $.Page.RelPermalink }}#_">0-9</a></li>
           {{ range $letters }}
-            <li><a href="#{{ . | lower }}">{{ . }}</a></li>
+            <li><a href="{{ $.Page.RelPermalink }}#{{ . | lower }}">{{ . }}</a></li>
           {{ end }}
         </ul>
       </div>

@@ -25,6 +25,7 @@ description: Человекопонятный список последних и
 * Пункты меню перемещены с правой части навигации в левую
 
 ## Исправлено
+* Ссылки в [глоссарии]({{< ref "/changelog" >}})
 * [Замечания Lighthouse](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Ftulpawiki.org)
 
 ### Удалено
