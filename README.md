@@ -62,4 +62,5 @@ hugo serve -e development
 
 * Райтифаг и команда Гексатреда
 * Русскоязычное сообщество TulpaWiki в [Discord](https://discord.gg/dv5kpGs) и [Telegram](https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA)
+* [Павел Кулешов](https://3err0.ru/)
 * [Кирилл Даншин](https://danshin.pro/)
