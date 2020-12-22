@@ -7,3 +7,38 @@ enableGitInfo: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
 title: TulpaWiki
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      footnote: true
+      table: true
+      strikethrough: true
+taxonomies:
+  source: sources
+module:
+  imports:
+    - path: gitlab.com/toby3d/hugo/webmonetization
+mediaTypes:
+  application/feed+json:
+    delimiter: "."
+    mainType: application
+    subType: feed
+    suffixes:
+      - json
+outputFormats:
+  JSONFeed:
+    name: JSONFeed
+    mediaType: "application/feed+json"
+    baseName: feed
+    isPlainText: true
+    rel: alternate
+outputs:
+  home:
+    - HTML
+    - JSONFeed
+  section:
+    - HTML
+    - JSONFeed
+  page:
+    - HTML

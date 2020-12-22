@@ -2,6 +2,7 @@
 type: contacts
 title: Контакты
 description: Информация для обратной связи
+menu: header
 aliases:
   - /ru/tulpawiki/контакты
 contacts:

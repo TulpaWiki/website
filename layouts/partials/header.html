@@ -3,7 +3,7 @@
     <ul>
       {{- $homePage := .Site.GetPage "/" -}}
       <li><a class="logo" href="{{- $homePage.RelPermalink -}}" title="{{ $homePage.Title }}">{{ .Site.Title }}</a></li>
-      {{- range .Site.Menus.general }}
+      {{- range .Site.Menus.header }}
         <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
       {{ end -}}
       <li class="js-search"></li>
