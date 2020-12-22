@@ -14,6 +14,13 @@ markup:
       footnote: true
       table: true
       strikethrough: true
+minify:
+  minifyOutput: true
+  tdewolff:
+    css:
+      keepCSS2: false
+    html:
+      keepConditionalComments: false
 taxonomies:
   source: sources
   author: authors
