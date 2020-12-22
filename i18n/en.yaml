@@ -19,7 +19,7 @@
   translation: Skip to footer
 - id: sources
   translation:
-    one: "source:"
+    few: "source:"
     other: "sources:"
 - id: contacts__write
   translation: Write
@@ -55,3 +55,6 @@
   translation: license
 - id: search
   translation: Search...
+- id: authors
+  one: "author:"
+  other: "authors:"

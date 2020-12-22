@@ -20,6 +20,7 @@
 - id: sources
   translation:
     one: "источник:"
+    few: "источники:"
     other: "источники:"
 - id: contacts__write
   translation: Написать
@@ -55,3 +56,6 @@
   translation: лицензия
 - id: search
   translation: Поиск...
+- id: authors
+  one: "автор:"
+  other: "авторы:"

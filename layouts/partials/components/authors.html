@@ -1,0 +1,17 @@
+{{ if .Params.authors }}
+  {{ $count := len .Params.authors }}
+  <b>
+    {{ if gt $count 1 }}
+      {{ println (":busts_in_silhouette:" | emojify) (i18n "authors" $count | title) }}
+    {{ else }}
+      {{ println (":bust_in_silhouette:" | emojify) (i18n "authors" $count | title) }}
+    {{ end }}
+    {{ range .Params.authors }}
+      {{ with $.Site.GetPage (print "authors/" .) }}
+        <a href="{{ .Permalink }}" title="{{ .LinkTitle }}">
+          {{ .Params.displayName }}
+        </a>
+      {{ end }}
+    {{ end }}
+  </b>
+{{ end }}
