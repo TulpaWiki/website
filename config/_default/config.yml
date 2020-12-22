@@ -44,7 +44,7 @@ outputFormats:
 outputs:
   home:
     - HTML
-    - JSONFeed
+    - JSON
   section:
     - HTML
     - JSONFeed
