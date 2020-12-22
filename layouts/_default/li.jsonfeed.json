@@ -1,0 +1,34 @@
+{
+  "id": {{ .File.UniqueID | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  {{ with .Params.link }}
+    "external_url": {{ . | jsonify }},
+  {{ end }}
+  "title": {{ .Title | jsonify }},
+  "content_html": {{ .Content | jsonify }},
+  "content_text": {{ .Plain | jsonify }},
+  "summary": {{ .Summary | jsonify }},
+  {{ with resources.Get "image" }}
+    "image": {{ .Permalink | jsonify }},
+  {{ end }}
+  {{ with resources.Get "banner_image" }}
+    "banner_image": {{ .Permalink | jsonify }},
+  {{ end }}
+  {{ with .PublishDate }}
+    "date_published": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  {{ end }}
+  {{ with .Lastmod }}
+    "date_modified": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  {{ end }}
+  {{ $authors := slice }}
+  {{ range .Site.Authors }}
+    {{ $authors = $authors | append (dict "name" .name "url" .url "avatar" .photo) }}
+  {{ end }}
+  {{ with $authors }}
+    "authors": {{ $authors | jsonify }},
+  {{ end }}
+  {{ with .Params.tags }}
+    "tags": {{ . | jsonify }},
+  {{ end }}
+  "language": {{ .Lang | jsonify }}
+}

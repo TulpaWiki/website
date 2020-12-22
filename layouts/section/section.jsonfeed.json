@@ -1,0 +1,33 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ .Title | jsonify }},
+  "home_page_url": {{ .Site.BaseURL | jsonify }},
+  "feed_url": {{ (.OutputFormats.Get "JSONFeed").Permalink | jsonify }},
+  {{ with .Description }}
+    "description": {{ . | jsonify }},
+  {{ end }}
+  {{ with .Params.userComment }}
+    "user_comment": {{ . | jsonify }},
+  {{ end }}
+  {{ with resources.Get "icon" }}
+    "icon": {{ .Permalink | jsonify }},
+  {{ end }}
+  {{ with resources.Get "favicon" }}
+    "favicon": {{ .Permalink | jsonify }},
+  {{ end }}
+  {{ $authors := slice }}
+  {{ range .Authors }}
+    {{ $authors = $authors | append (dict "name" .name "url" .url "avatar" .photo) }}
+  {{ end }}
+  {{ with $authors }}
+    "authors": {{ $authors | jsonify }},
+  {{ end }}
+  "language": {{ .Lang | jsonify }},
+  "expired": {{ and (ne .ExpiryDate.IsZero true) (now.After .ExpiryDate) | jsonify }},
+  {{/* "hubs": [], */}}
+  {{ $items := slice }}
+  {{ range .Pages }}
+    {{ $items = $items | append (.Render "li" | transform.Unmarshal) }}
+  {{ end }}
+  "items": {{ $items | jsonify }}
+}

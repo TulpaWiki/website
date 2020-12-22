@@ -1,4 +1,7 @@
 {{ partial "styles" . }}
 {{ partial "schema" . }}
+{{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.String }}" href="{{ .Permalink }}">
+{{ end }}
 <link rel="canonical" href="{{ .Page.Permalink | absLangURL }}">
 <title>{{ println .Page.Title "|" .Site.Title }}</title>
