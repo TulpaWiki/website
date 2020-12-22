@@ -3,11 +3,15 @@
   <head>
     {{ partial "head" . }}
   </head>
-  <body class="[ page__body ][ stack stack_split-after_3 ]">
+  <body class="[ page__body ][{{ if eq .Kind "404" }} cover cover_min-height_100vh {{ else }} stack stack_split-after_3 {{ end }}]">
     {{ partial "components/skip-links" . }}
-    {{ partial "header" . }}
+    {{ block "header" . }}
+      {{ partial "header" . }}
+    {{ end }}
     {{ block "main" . }}{{ end }}
-    {{ partial "footer" . }}
+    {{ block "footer" . }}
+      {{ partial "footer" . }}
+    {{ end }}
     {{ partial "scripts" . }}
   </body>
 </html>
