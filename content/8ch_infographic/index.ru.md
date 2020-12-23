@@ -8,5 +8,5 @@ sources:
 aliases:
   - /ru/8ch_infographic
 ---
-![](rus_8ch.infographic.png)
+![]({{< res "rus_8ch.infographic.png" >}})
 

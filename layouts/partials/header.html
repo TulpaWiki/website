@@ -1,20 +1,7 @@
-<header class="[ box ][ box_border_none box_boder_bottom stack_space_0 ]" id="header">
-  <nav class="[ center ][ cluster cluster_justify_start cluster_align_center ]">
-    <ul>
-      {{ $home := .Site.GetPage "/" }}
-      <li>
-        <a class="logo" href="{{ $home.RelPermalink }}" title="{{ $home.LinkTitle }}">
-          {{ .Site.Title }}
-        </a>
-      </li>
-      {{- range .Site.Menus.header }}
-        <li>
-          <a href="{{ .URL }}" title="{{ .Title }}">
-            {{ .Name }}
-          </a>
-        </li>
-      {{ end -}}
-      <li class="js-search"></li>
-    </ul>
-  </nav>
+<header class="[ body__header ][ box ][ background-color_primary margin-top_0 ]" id="header">
+  <div class="center center_max_x1.5">
+    <h1>
+      {{ .Title }}
+    </h1>
+  </div>
 </header>

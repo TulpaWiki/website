@@ -59,3 +59,7 @@
 - id: authors
   one: "автор:"
   other: "авторы:"
+- id: published
+  translation: опубликовано
+- id: by
+  translation: от

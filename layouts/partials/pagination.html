@@ -1,0 +1,22 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+  <nav class="center cluster cluster_justify_space-around">
+    <ul>
+      {{ if $paginator.HasPrev }}
+        <li>
+          <a href="{{ $paginator.Prev.URL }}">
+            &#11104; {{ i18n "pagination__prev" | title }}
+          </a>
+        </li>
+      {{ end }}
+      <li>{{ i18n "pagination__state" $paginator }}</li>
+      {{ if $paginator.HasNext }}
+        <li>
+          <a href="{{ $paginator.Next.URL }}">
+            {{ i18n "pagination__next" | title }} &#11106;
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}

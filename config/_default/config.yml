@@ -12,8 +12,16 @@ markup:
   goldmark:
     extensions:
       footnote: true
-      table: true
       strikethrough: true
+      table: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    tableOfContents:
+      startLevel: 2
+      endLevel: 3
+      ordered: true
 minify:
   minifyOutput: true
   tdewolff:

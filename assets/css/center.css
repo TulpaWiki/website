@@ -3,6 +3,8 @@
   margin-left: auto;
   margin-right: auto;
   max-width: var(--center-max);
+  padding-left: var(--center-gutters);
+  padding-right: var(--center-gutters);
 }
 
 .center_text {
@@ -15,7 +17,10 @@
   flex-direction: column;
 }
 
-.center_padding_gutters {
-  padding-left: var(--center-gutters);
-  padding-right: var(--center-gutters);
+.center_gutters_s0 {
+  --center-gutters: var(--s0);
+}
+
+.center_max_x1\.5 {
+  --center-max: calc(var(--measure) * 1.5);
 }

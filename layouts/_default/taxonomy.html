@@ -1,12 +1,10 @@
-{{- define "main" }}
+{{ define "header" }}
+  {{ partial "navigation" . }}
+  {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
   <main class="center center_padding_gutters stack" id="main">
-    <header>
-      <h1>
-        {{- with .Params.website }}<a rel="noopener noreferrer" href="{{ . }}" target="_blank">{{ end -}}
-        {{ .Title }}
-        {{- if .Params.website}}</a>{{ end -}}
-      </h1>
-    </header>
     <article class="stack">
       {{ with .Content }}{{ . }}{{ end }}
       <ul class="stack">
@@ -16,5 +14,5 @@
       </ul>
     </article>
   </main>
-  {{ partial "components/pagination" . }}
-{{ end -}}
+  {{ partial "pagination" . }}
+{{ end }}

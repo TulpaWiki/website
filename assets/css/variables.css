@@ -1,5 +1,6 @@
 :root {
-  --font-family: 'Inter', Variable Fallback, Arial, sans-serif;
+  --OFF: ;
+  --font-family: Variable Fallback, Arial, sans-serif;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -41,4 +42,8 @@
   --stack-space: var(--s0);
   --switcher-space: var(--s1);
   --switcher-threshold: var(--measure);
+  --box-border-width: var(--border-thin);
+  --box-padding: var(--s1);
+  --color-primary: hsl(209.7, 80.1%, 72.4%);
+  --color-secondary: hsl(180, 7.7%, 87.3%);
 }

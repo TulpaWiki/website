@@ -1,5 +1,6 @@
 :root {
   font-family: var(--font-family);
+  color: var(--color-text);
   font-size: calc(var(--s0) + 0.5vw);
   hyphens: auto;
   line-height: var(--ratio);
@@ -68,13 +69,6 @@ h4 > .header__sub-header {
   font-size: calc(var(--s0) / 2);
 }
 
-main > ol,
-main > ul,
-aside > ol,
-aside > ul {
-  padding-left: 2em;
-}
-
 html,
 body,
 div,
@@ -108,8 +102,8 @@ hr {
   border-width: var(--border-thin);
 }
 
-body {
-  min-height: 100vh;
+input {
+  font-size: inherit;
 }
 
 button,
@@ -164,8 +158,8 @@ button[disabled]:focus,
 
 a:focus,
 .link:focus {
-  outline: auto 1em Highlight; /* NOTE(toby3d): non-webkit browsers */
-  outline: auto 2em -webkit-focus-ring-color; /* NOTE(toby3d): webkit browsers */
+  outline: 3px solid Highlight; /* NOTE(toby3d): non-webkit browsers */
+  outline: 3px solid -webkit-focus-ring-color; /* NOTE(toby3d): webkit browsers */
 }
 
 blockquote {
@@ -195,12 +189,31 @@ pre {
   padding: var(--s1);
 }
 
-.cards {
-  list-style: none;
+.page__body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.body__header {
+  padding: var(--box-padding);
+  background-color: var(--header-background-color);
+}
+
+.body__main {
+  flex: 1 0 auto;
+}
+
+.body__footer {
+  background-color: var(--footer-background-color);
 }
 
 .logo {
   text-decoration: none;
   font-variation-settings: 'wght' 800;
   font-weight: 800;
+}
+
+.search__results {
+  border-width: var(--border-width);
 }

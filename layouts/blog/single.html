@@ -1,0 +1,46 @@
+{{ define "header" }}
+  {{ partial "navigation" . }}
+  {{ partial "header" . }}
+  {{ $authors := slice }}
+  {{ range .Params.authors }}
+    {{ $authors = $authors | append ($.Site.GetPage (print "authors/" .)) }}
+  {{ end }}
+  <div class="[ center center_max_x1.5 ][ width_100% ]">
+    <h3>
+      {{ i18n "by" | title }}
+      {{ range $index, $author := $authors }}
+        {{- if gt $index 0 }},{{ end }}
+        <a href="{{ $author.Permalink }}" title="{{ $author.LinkTitle }}">
+          {{- $author.Params.displayName -}}
+        </a>
+      {{- end }}
+    </h3>
+    <small>
+      {{ i18n "published" }}
+      <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+    </small>
+  </div>
+{{ end }}
+
+{{ define "main" }}
+  <main class="[ body__main ][ center center_max_x1.5 ][ width_100% ]" id="main">
+    {{ with .Content }}
+      <article class="stack stack_recursive">
+        {{ . }}
+      </article>
+    {{ end }}
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+<footer id="footer" class="[ body__footer ][ box stack stack_recursive ][ background-color_secondary ]">
+  <div class="cluster cluster_justify_space-between cluster_align_center">
+    <small>
+      <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
+        {{ println "&#127279;" (now.Format "2006") .Site.Title | safeHTML }}
+      </a>
+      <span class="js-theme-switcher"></span>
+    </small>
+  </div>
+</footer>
+{{ end }}

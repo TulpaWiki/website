@@ -1,8 +1,8 @@
-<footer id="footer" class="box box_border_none box_boder_top stack">
+<footer id="footer" class="[ body__footer ][ box stack stack_recursive ][ background-color_secondary ]">
   <div class="switcher switcher_limit_4">
     <div>
-      <div class="stack">
-        <section class="stack">
+      <div>
+        <section>
           <h3>{{ i18n "menu_contribute" }}</h3>
           <nav>
             <ul>
@@ -25,9 +25,9 @@
         </section>
       </div>
       {{- if (or .Site.Menus.telegram .Site.Menus.discord) }}
-      <div class="stack">
+      <div>
         {{ with .Site.Menus.telegram }}
-          <section class="stack">
+          <section>
             <h3>{{ i18n "menu_telegram" }}</h3>
             <nav>
               <ul>
@@ -39,7 +39,7 @@
           </section>
         {{ end }}
         {{ with .Site.Menus.discord }}
-          <section class="stack">
+          <section>
             <h3>{{ i18n "menu_discord" }}</h3>
             <nav>
               <ul>
@@ -52,9 +52,9 @@
         {{ end }}
       </div>
       {{ end -}}
-      <div class="stack">
+      <div>
         {{ with .Site.Menus.partners }}
-          <section class="stack">
+          <section>
             <h3>{{ i18n "menu_partners" }}</h3>
             <nav>
               <ul>
@@ -66,37 +66,6 @@
           </section>
         {{ end }}
       </div>
-      {{ with .Site.Data.patrons }}
-        <section class="stack">
-          {{- $imagePath := "static/images/become_a_patron_button.png" -}}
-          {{ if (fileExists $imagePath) }}
-            <a rel="noopener noreferrer" href="https://patreon.com/join/toby3d" target="_blank">
-              {{- $config := imageConfig $imagePath -}}
-              <img class="max-width_fifth" alt="become a patron" src="{{ strings.TrimPrefix "static/" $imagePath | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
-            </a>
-          {{ else }}
-            <h3>{{ i18n "menu_patrons" }}</h3>
-          {{ end }}
-          <div class="cluster">
-            <ul class="center_text">
-              {{- range .patrons }}
-                <li>
-                  {{- if .link }}<a rel="noopener noreferrer" href="{{- .link -}}" title="{{- .name -}}" target="_blank">{{ end -}}
-                  {{- $imagePath := (print "static/images/patrons/" .id ".png") -}}
-                  {{- if (and .id (fileExists $imagePath)) }}
-                    {{- $config := imageConfig $imagePath -}}
-                    <img alt="{{- .name -}}" src="{{- strings.TrimPrefix "static/" $imagePath | relURL -}}" width="{{- $config.Width -}}" height="{{- $config.Height -}}" loading="lazy">
-                  {{ else }}
-                    <small>{{- delimit (split .name " ") "<br/>" -}}</small>
-                  {{ end -}}
-                  {{- if .link }}</a>{{ end -}}
-                </li>
-              {{ end -}}
-              <li><a href="{{- ($.Site.GetPage "/donate").RelPermalink -}}">{{- i18n "menu_patrons__add-yourself" -}}</a></li>
-            </ul>
-          </div>
-        </section>
-      {{ end }}
     </div>
   </div>
   <div class="cluster cluster_justify_space-between cluster_align_center">

@@ -1,0 +1,24 @@
+{{ define "header" }}
+  {{ partial "navigation" . }}
+  {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="[ center ][ stack ][ center_padding_gutters ]" id="main">
+    <article class="stack">
+      {{ with .Content }}
+        {{ . }}
+      {{ end }}
+      <ul>
+        {{ range where .Parent.Pages "Type" "guide" }}
+          <li>
+            <a href="{{ .Permalink }}" title="{{ .LinkTitle }}">
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </article>
+    {{ partial "pagination" . }}
+  </main>
+{{ end }}

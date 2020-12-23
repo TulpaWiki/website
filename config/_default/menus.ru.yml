@@ -6,7 +6,7 @@ telegram:
     url: https://t.me/joinchat/AkuYY0ExBslQKlt2CRDazA
   - identifier: stickers
     title: Тематический набор стикеров
-    name: Набор стикеров
+    name: Стикеры
     url: https://t.me/addstickers/TulpaWiki
 discord:
   - identifier: general

@@ -1,14 +1,13 @@
-.skip-links {
-  display: inline-block;
-}
-
 .skip-links__link {
+  display: inline-block;
   position: absolute;
+  top: -10rem;
   top: -100px;
-  padding: var(--s-3);
+  padding: var(--s-1);
   text-decoration: none;
 }
 
 .skip-links__link:focus {
+  z-index: 1;
   top: 0;
 }

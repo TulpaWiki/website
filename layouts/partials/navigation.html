@@ -1,0 +1,22 @@
+<nav class="[ box cluster ][ margin-top_0 ]">
+  <ul>
+    <li>
+      {{ $home := .Site.GetPage "/" }}
+      <a class="logo" href="{{ $home.RelPermalink }}" title="{{ $home.LinkTitle }}">
+        {{ .Site.Title }}
+      </a>
+    </li>
+    <li class="js-search"></li>
+    <li class="[ cluster ][ margin-left_auto ]">
+      <ul>
+        {{ range .Site.Menus.header }}
+          <li>
+            <a href="{{ .URL }}" title="{{ .Title }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -58,3 +58,9 @@
 - id: authors
   one: "author:"
   other: "authors:"
+- id: published
+  translation: published
+- id: by
+  translation: by
+- id: last-modified
+  translation: "Last modified:"

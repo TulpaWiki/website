@@ -1,20 +1,22 @@
+{{ define "header" }}
+  {{ partial "navigation" . }}
+  {{ partial "header" . }}
+{{ end }}
+
 {{ define "main" }}
-  <main class="center center_padding_gutters" id="main">
+  <main class="center center_padding_gutters center_max_x1.5" id="main">
     {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
     {{ $numbers := split "0123456789" "" }}
-    <header>
-      <h1>{{ .Title }}</h1>
-    </header>
     <article class="stack">
       {{ with .Content }}{{ . }}{{ end }}
-      <div class="cluster">
+      <nav class="cluster">
         <ul class="list-style_none">
           <li><a href="{{ $.Page.RelPermalink }}#_">0-9</a></li>
           {{ range $letters }}
             <li><a href="{{ $.Page.RelPermalink }}#{{ . | lower }}">{{ . }}</a></li>
           {{ end }}
         </ul>
-      </div>
+      </nav>
       <div class="[ grid js-grid ][ grid_minimum_7.5rem ]">
         {{ range $i, $number := $numbers }}
           {{- $pages := slice -}}

@@ -1,29 +1,11 @@
 .box {
-  --border-width: var(--border-thin);
-  --padding: var(--s1);
-  padding: var(--padding);
-  border-style: solid;
-  border-width: var(--border-width);
+  padding: var(--box-padding);
 }
 
 .box * {
   color: inherit;
 }
 
-.box_no-padding {
+.box_padding_0 {
   --padding: 0;
-}
-
-.box_border_none {
-  border-style: none;
-}
-
-.box_boder_top {
-  border-top-style: solid;
-  border-top-width: var(--border-width);
-}
-
-.box_boder_bottom {
-  border-bottom-style: solid;
-  border-bottom-width: var(--border-width);
 }

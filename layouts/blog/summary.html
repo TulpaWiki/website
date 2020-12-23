@@ -1,0 +1,23 @@
+<li>
+  <h3>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h3>
+  <p>{{ .Summary }}</p>
+  <small>
+    {{ i18n "published" | title }}
+    <time>
+      {{ .PublishDate.Format "January 2, 2006" }}
+    </time>
+    {{ i18n "by" }}
+    {{ range $index, $author := .Params.authors }}
+      {{- if gt $index 0 }},{{ end }}
+      {{ with $.Site.GetPage (print "authors/" $author) }}
+        <a href="{{ .RelPermalink }}" title="{{ .LinkTitle }}">
+          {{- .Params.displayName -}}
+        </a>
+      {{- end }}
+    {{- end }}
+  </small>
+</li>

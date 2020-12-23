@@ -3,10 +3,10 @@
   <head>
     {{ partial "head" . }}
   </head>
-  <body class="[ page__body ][{{ if eq .Kind "404" }} cover cover_min-height_100vh {{ else }} stack stack_split-after_3 {{ end }}]">
-    {{ partial "components/skip-links" . }}
+  <body class="[ page__body ][ body stack stack_split-after_4 {{ if eq .Kind "404" }} cover cover_min-height_100vh {{ end }} ]">
+    {{ partial "skip-links" . }}
     {{ block "header" . }}
-      {{ partial "header" . }}
+      {{ partial "navigation" . }}
     {{ end }}
     {{ block "main" . }}{{ end }}
     {{ block "footer" . }}

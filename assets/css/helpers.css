@@ -37,3 +37,19 @@
 .list-style_none {
   list-style: none;
 }
+
+.background-color_primary {
+  background-color: var(--color-primary);
+}
+
+.background-color_secondary {
+  background-color: var(--color-secondary);
+}
+
+.margin-top_0 {
+  margin-top: 0;
+}
+
+.margin-left_auto {
+  margin-left: auto;
+}

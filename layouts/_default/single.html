@@ -1,17 +1,24 @@
-{{- define "main" }}
-  <main class="center center_padding_gutters stack" id="main">
-    <header>
-      <h1>{{- .Title -}}</h1>
-      <small class="cluster">
-        <span>
-          <span>{{ partial "components/authors" . }}</span>
-          <span>{{ partial "components/sources" . }}</span>
-          <span>{{ partial "components/license" . }}</span>
-        </span>
-      </small>
-    </header>
-    <article class="stack">
-      {{- with .Content }}{{ . }}{{ end -}}
-    </article>
+{{ define "header" }}
+  {{ partial "navigation" . }}
+  {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="[ body__main ][ sidebar sidebar_side_left ]" id="main">
+    <div>
+      <aside class="center">
+        <section>
+          <header class="stack stack_recursive">
+            <h2>{{ i18n "toc" }}</h2>
+          </header>
+          {{ .TableOfContents }}
+        </section>
+      </aside>
+      {{ with .Content }}
+        <article class="center center_max_x1.5 stack stack_inherit">
+          {{ . }}
+        </article>
+      {{ end }}
+    </div>
   </main>
-{{ end -}}
+{{ end }}
