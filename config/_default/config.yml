@@ -58,3 +58,5 @@ outputs:
     - JSONFeed
   page:
     - HTML
+permalinks:
+  blog: /blog/:year/:month/:filename
