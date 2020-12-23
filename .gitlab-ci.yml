@@ -1,13 +1,19 @@
 ---
-image: registry.gitlab.com/pages/hugo:latest
+image:
+  name: klakegg/hugo:ext-alpine
+  entrypoint: ['']
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-  - apk update
-  - apk upgrade
-  - apk add git
+  - apk add --update --no-cache git
+  - git submodule update --init --recursive
+
+stages:
+  - build
+  - test
+  - deploy
 
 test:
   stage: test
@@ -17,7 +23,7 @@ test:
 
 pages:
   stage: deploy
-  script: hugo --minify
+  script: hugo --gc --minify
   artifacts:
     paths:
       - public
