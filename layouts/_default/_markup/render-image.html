@@ -1,8 +1,35 @@
-<figure class="box">
-  <img src="{{ .Destination | safeURL }}" alt="{{ . }}" loading="lazy">
+<figure
+  class="[ stack ][ center center_text ]"
+  style="--center-max: calc(var(--measure) / 1.5)">
+
+  {{- with .Page.Resources.GetMatch (path.Base .Destination) -}}
+    {{- $.Page.Scratch.Add "links" (slice (dict
+      "rel" "preload"
+      "as" "image"
+      "href" .RelPermalink
+      "type" .MediaType.String
+    )) -}}
+    <img
+      alt="{{ $.Text | safeHTMLAttr }}"
+      crossorigin="anonymous"
+      decoding="async"
+      height="{{ .Height }}"
+      importance="high"
+      loading="lazy"
+      src="{{ .RelPermalink }}"
+      width="{{ .Width }}">
+  {{ else }}
+    <img
+      alt="{{ .Text | safeHTMLAttr }}"
+      crossorigin="anonymous"
+      decoding="async"
+      importance="high"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="{{ .Destination | safeURL }}">
+  {{ end }}
+
   {{ with .Title }}
-    <figcaption>
-      {{ . }}
-    </figcaption>
+    <figcaption class="font-style_italic">{{- . -}}</figcaption>
   {{ end }}
 </figure>
