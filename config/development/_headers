@@ -1,0 +1,8 @@
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  Permissions-Policy: interest-cohort=()
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
