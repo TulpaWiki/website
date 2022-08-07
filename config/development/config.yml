@@ -3,5 +3,5 @@ baseURL: http://127.0.0.1:1313/
 disableLiveReload: false
 watch: true
 module:
-  noProxy: "gitlab.com/toby3d/*"
-  private: "gitlab.com/toby3d/*"
+  noProxy: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*"
+  private: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*"
