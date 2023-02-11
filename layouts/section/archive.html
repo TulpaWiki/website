@@ -9,15 +9,17 @@
       {{ with .Content }}
         {{ . }}
       {{ end }}
+      
+      {{ range (.Parent.Pages.GroupByParam "category").Reverse }}
+      <h3>{{ .Key }}</h3>
       <ul>
-        {{ range where .Parent.Pages "Type" "guide" }}
+          {{ range .Pages }}
           <li>
-            <a href="{{ .Permalink }}" title="{{ .LinkTitle }}">
-              {{ .Title }}
-            </a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
           </li>
-        {{ end }}
+          {{ end }}
       </ul>
+      {{ end }}
     </article>
     {{ partial "pagination" . }}
   </main>

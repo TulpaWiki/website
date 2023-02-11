@@ -1,6 +1,6 @@
 :root {
   font-family: var(--font-family);
-  color: var(--color-text);
+  color: #000000;
   font-size: calc(var(--s0) + 0.5vw);
   hyphens: auto;
   line-height: var(--ratio);

@@ -24,7 +24,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ body__main ][ center ][ width_100% ]" id="main">
+  <main class="[ body__main ][ center ][ width_100% ]" id="main" style="padding:0;">
     {{ $blog := .Site.GetPage "blog" }}
     <h2>
       {{ $blog.Title }}

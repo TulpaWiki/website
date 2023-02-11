@@ -1,7 +1,7 @@
 :root {
   --OFF: ;
   --font-family: Variable Fallback, Arial, sans-serif;
-  --ratio: 1.5;
+  --ratio: 1.3;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
   --s-3: calc(var(--s-2) / var(--ratio));
@@ -46,5 +46,4 @@
   --box-padding: var(--s1);
   --color-primary: hsl(209.7, 80.1%, 72.4%);
   --color-secondary: hsl(180, 7.7%, 87.3%);
-  --color-text: hsl(0, 0%, 10%);
 }
