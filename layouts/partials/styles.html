@@ -17,7 +17,8 @@
 {{- $liteYouTube := resources.Get "css/lite-yt-embed.css" -}}
 {{- $liteVimeo := resources.Get "css/lite-vimeo-embed.css" -}}
 {{- $search := resources.Get "css/search.css" -}}
-{{- $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
+{{- $table := resources.Get "css/table.css" -}}
+{{- $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search $table | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
 {{ if .IsHome }}<link rel="prefetch" as="image" href="{{ "images/logo.png" | relURL }}">{{ end }}
 <link rel="prefetch" as="image" href="{{ "images/become_a_patron_button.png" | relURL }}">
 <link rel="preload stylesheet" as="style" href="{{ $styles.RelPermalink | relURL }}" type="text/css">
