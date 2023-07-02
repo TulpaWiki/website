@@ -47,4 +47,5 @@
   --color-primary: hsl(209.7, 80.1%, 72.4%);
   --color-secondary: hsl(180, 7.7%, 87.3%);
   --color-text: hsl(0, 0%, 10%);
+  --color-table: hsl(0, 0%, 90%);
 }
