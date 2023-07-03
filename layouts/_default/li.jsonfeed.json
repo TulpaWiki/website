@@ -21,7 +21,7 @@
     "date_modified": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},
   {{ end }}
   {{ $authors := slice }}
-  {{ range .Site.Authors }}
+  {{ range .Site.Params.authors }}
     {{ $authors = $authors | append (dict "name" .name "url" .url "avatar" .photo) }}
   {{ end }}
   {{ with $authors }}
