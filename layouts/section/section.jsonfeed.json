@@ -16,8 +16,15 @@
     "favicon": {{ .Permalink | jsonify }},
   {{ end }}
   {{ $authors := slice }}
-  {{ range .Authors }}
-    {{ $authors = $authors | append (dict "name" .name "url" .url "avatar" .photo) }}
+  {{ range .Params.authors }}
+    {{ $author := $.Site.GetPage (print "authors/" .) }}
+    {{ with $author }}
+      {{ $authors = $authors | append (dict
+        "name" (println .Params.givenName .Params.familyName)
+        "url" .Permalink
+        "avatar" .Params.image
+      ) }}
+    {{ end }}
   {{ end }}
   {{ with $authors }}
     "authors": {{ $authors | jsonify }},
