@@ -53,9 +53,9 @@ _2014_
 
 ### Тульповоды: кто они и откуда?
 
+![](geolocation.png) 
 
-
-
+![](country_chart.png)
 
 Опрошенным тульповодам было от 14 до 34 лет; большинству из них — от 19 до 23. Примерное соотношение мужчин и женщин 75/25 (мужчин/женщин), при этом до 10% идентифицировали себя как гендерфлюидов или представителей других "необычных" гендеров.
 
@@ -128,3 +128,4 @@ _2014_
 
 ## Ссылки
 * [Полное исследование](http://somatosphere.net/2015/04/varieties-of-tulpa-experiences-sentient-imaginary-friends-embodied-joint-attention-and-hypnotic-sociality-in-a-wired-world.html)
+* [Скачать статью](veissiere_tulpa_summary_revised_.pdf)
