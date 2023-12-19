@@ -1,5 +1,5 @@
 ---
-publishDate: 2022-12-19T18:07:00+05:00
+publishDate: 2023-12-19T18:07:00+05:00
 title: Глобальный перенос гайдов
 type: blog
 authors:
