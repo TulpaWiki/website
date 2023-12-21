@@ -3,5 +3,5 @@ baseURL: /
 disableLiveReload: false
 watch: true
 module:
-  noProxy: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*"
-  private: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*"
+  noProxy: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*,github.com/tulpawiki/*,gitlab.com/tulpawiki/*"
+  private: "source.toby3d.me/*,gitlab.com/toby3d/*,github.com/toby3d/*,github.com/tulpawiki/*,gitlab.com/tulpawiki/*"
