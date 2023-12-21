@@ -32,9 +32,6 @@ minify:
 taxonomies:
   source: sources
   author: authors
-module:
-  imports:
-    - path: gitlab.com/toby3d/hugo/webmonetization
 mediaTypes:
   application/feed+json:
     delimiter: "."
