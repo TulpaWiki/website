@@ -6,8 +6,8 @@ weight: 2
 
 ## Литература
 Тульповодство в современной литературе представлено в основном малой формой (рассказами) и отчётами (они же репорты). Популярно также переписывание популярных копипаст.
-=скопировать сюда таблицы из https://tulpawiki.scaledteam.ru/doku.php?id=art:text:index
-file:///home/scaled/тульпавики/tulpawiki.org2/ru/категория/творчество.html 
+<!-- =скопировать сюда таблицы из https://tulpawiki.scaledteam.ru/doku.php?id=art:text:index
+file:///home/scaled/тульпавики/tulpawiki.org2/ru/категория/творчество.html -->
 
 |||
 |---|---|
