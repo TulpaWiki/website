@@ -52,6 +52,7 @@ hugo serve -e development
 ## Авторы
 
 * **Лебедев Максим** -- Основатель -- [toby3d](https://toby3d.me/)
+* **scaled** -- Сопровождающий -- [scaled](https://scaledteam.ru/)
 
 ## Лицензия
 
