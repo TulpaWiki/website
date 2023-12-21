@@ -1,6 +1,5 @@
 {{ partial "styles" . }}
 {{ partial "schema" . }}
-{{ partial "monetization" . }}
 {{ range .AlternativeOutputFormats }}
   <link rel="{{ .Rel }}" type="{{ .MediaType.String }}" href="{{ .Permalink }}">
 {{ end }}
