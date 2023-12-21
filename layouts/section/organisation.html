@@ -1,0 +1,34 @@
+{{ define "header" }}
+{{ partial "navigation" . }}
+{{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+<main class="[ center ][ stack ][ center_padding_gutters ]"
+      id="main">
+
+  <article class="stack">
+    {{ with .Summary }}
+    <p>{{ . }}</p>
+    {{ end }}
+    <ol>
+      {{ range .Pages }}
+      <li>
+        <h2>
+          <a href="{{ .Permalink }}"
+             title="{{ .LinkTitle }}">
+
+            {{- .Title -}}
+          </a>
+        </h2>
+
+        {{ with .Summary }}
+        <p>{{- . -}}</p>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ol>
+  </article>
+  {{ partial "pagination" . }}
+</main>
+{{ end }}
