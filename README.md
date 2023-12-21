@@ -21,7 +21,7 @@
 Склонируйте проект:
 
 ```bash
-git clone https://gitlab.com/TulpaWiki/tulpawiki.gitlab.io.git
+git clone https://github.com/TulpaWiki/website.git
 ```
 
 Перейдите в корневую директорию проекта и запустите сборку в режиме разработки:
