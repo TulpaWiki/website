@@ -9,7 +9,7 @@ category: Советы по форсингу
 
 Перевод: **OleGL**
 
-Источник: [[https://community.tulpa.info/thread-sentience-coaxing-tulpae-into-talking]]
+Источник: https://community.tulpa.info/thread-sentience-coaxing-tulpae-into-talking
 
 Собственно, сабж. Я заметил, у многих есть эта проблема, но немногие отваживаются говорить о ней вслух. Часто люди жалуются, что из их полностью разумной тульпы слова не вытянешь, и при этом не знают, что делать.
 

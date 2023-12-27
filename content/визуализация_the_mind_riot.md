@@ -1,6 +1,6 @@
 ---
 type: guide
-title: Гайд по визуализации [The Mind Riot]
+title: "Гайд по визуализации [The Mind Riot]"
 category: Визуализация
 ---
 

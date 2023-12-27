@@ -1,6 +1,6 @@
 ---
 type: guide
-title: Что такое Тульпа?! [FAQ man]
+title: "Что такое Тульпа?! [FAQ man]"
 category: Заметки и прочее
 date: 2019-12-29
 ---
