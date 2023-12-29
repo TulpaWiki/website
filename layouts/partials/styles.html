@@ -11,14 +11,11 @@
 {{- $frame := resources.Get "css/frame.css" -}}
 {{- $reel := resources.Get "css/reel.css" -}}
 {{- $imposter := resources.Get "css/imposter.css" -}}
-{{- $helpers := resources.Get "css/helpers.css" -}}
+{{- $utilities := resources.Get "css/utilities.css" -}}
 {{- $themeSwitcher := resources.Get "css/theme-switcher.css" -}}
 {{- $skipLinks := resources.Get "css/skip-links.css" -}}
 {{- $liteYouTube := resources.Get "css/lite-yt-embed.css" -}}
 {{- $liteVimeo := resources.Get "css/lite-vimeo-embed.css" -}}
 {{- $search := resources.Get "css/search.css" -}}
 {{- $table := resources.Get "css/table.css" -}}
-{{- $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $helpers $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search $table | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
-{{ if .IsHome }}<link rel="prefetch" as="image" href="{{ "images/logo.png" | relURL }}">{{ end }}
-<link rel="prefetch" as="image" href="{{ "images/become_a_patron_button.png" | relURL }}">
-<link rel="preload stylesheet" as="style" href="{{ $styles.RelPermalink | relURL }}" type="text/css">
+{{- $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $utilities $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search $table | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
