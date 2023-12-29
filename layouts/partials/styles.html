@@ -19,3 +19,12 @@
 {{- $search := resources.Get "css/search.css" -}}
 {{- $table := resources.Get "css/table.css" -}}
 {{- $styles := slice $variables $general $switcher $center $cover $stack $box $grid $sidebar $cluster $frame $reel $imposter $utilities $themeSwitcher $skipLinks $liteYouTube $liteVimeo $search $table | resources.Concat "styles.css" | resources.ExecuteAsTemplate "styles.css" . | minify | fingerprint -}}
+{{ if .IsHome }}
+<link rel="prefetch"
+      as="image"
+      href="{{ "images/logo.png" | relURL }}">
+{{ end }}
+<link rel="preload stylesheet"
+      as="style"
+      href="{{ $styles.RelPermalink | relURL }}"
+      type="text/css">
