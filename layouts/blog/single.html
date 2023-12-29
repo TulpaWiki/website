@@ -1,42 +1,54 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  {{ partial "header" . }}
-  {{ $authors := slice }}
-  {{ range .Params.authors }}
+{{ partial "navigation" . }}
+<header class="[ body__header box ][ stack ][ background-color_primary margin-top:0 ]"
+        id="header">
+
+  <div class="center center_max_x1.5">
+    <h1>{{ .Title }}</h1>
+
+    {{ $authors := slice }}
+    {{ range .Params.authors }}
     {{ $authors = $authors | append ($.Site.GetPage (print "authors/" .)) }}
-  {{ end }}
-  <div class="[ center center_max_x1.5 ][ width:100% ]">
-    <h3>
-      {{ i18n "by" | title }}
+    {{ end }}
+    <h2>
+      {{ i18n "by" }}
       {{ range $index, $author := $authors }}
-        {{- if gt $index 0 }},{{ end }}
-        <a href="{{ $author.Permalink }}" title="{{ $author.LinkTitle }}">
-          {{- $author.Params.displayName -}}
-        </a>
+      {{- if gt $index 0 }},{{ end }}
+      <a href="{{ $author.Permalink }}"
+         title="{{ $author.LinkTitle }}">
+        {{- $author.Params.displayName -}}
+      </a>
       {{- end }}
-    </h3>
+    </h2>
     <small>
       {{ i18n "published" }}
       <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
     </small>
   </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ body__main ][ center center_max_x1.5 ][ width:100% ]" id="main">
-    {{ with .Content }}
-      <article class="stack stack_recursive">
-        {{ . }}
-      </article>
-    {{ end }}
-  </main>
+<main class="[ body__main box ][ center center_max_x1.5 ][ width:100% ]"
+      id="main">
+
+  {{ with .Content }}
+  <article class="stack stack_recursive">
+    {{ . }}
+  </article>
+  {{ end }}
+</main>
 {{ end }}
 
 {{ define "footer" }}
-<footer id="footer" class="[ body__footer ][ box stack stack_recursive ][ background-color_secondary ]">
+<footer id="footer"
+        class="[ body__footer ][ box stack stack_recursive ][ background-color_secondary ]">
   <div class="cluster cluster_justify_space-between cluster_align_center">
     <small>
-      <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">
+      <a rel="noopener noreferrer"
+         href="https://creativecommons.org/licenses/by-sa/4.0/"
+         rel="license"
+         target="_blank">
         {{ println "&#127279;" (now.Format "2006") .Site.Title | safeHTML }}
       </a>
       <span class="js-theme-switcher"></span>

@@ -1,26 +1,27 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  {{ partial "header" . }}
+{{ partial "navigation" . }}
+{{ partial "header" . }}
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ center ][ stack ][ center_padding_gutters ]" id="main">
-    <article class="stack">
-      {{ with .Content }}
-        {{ . }}
+<main class="[ box ][ center stack ][ center_padding_gutters ]"
+      id="main">
+  <article class="stack">
+    {{ with .Content }}
+    {{ . }}
+    {{ end }}
+
+    {{ range (.Parent.Pages.GroupByParam "category").Reverse }}
+    <h3>{{ .Key }}</h3>
+    <ul>
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
       {{ end }}
-      
-      {{ range (.Parent.Pages.GroupByParam "category").Reverse }}
-      <h3>{{ .Key }}</h3>
-      <ul>
-          {{ range .Pages }}
-          <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
-          {{ end }}
-      </ul>
-      {{ end }}
-    </article>
-    {{ partial "pagination" . }}
-  </main>
+    </ul>
+    {{ end }}
+  </article>
+  {{ partial "pagination" . }}
+</main>
 {{ end }}

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html class="page" lang="{{ .Page.Lang }}" dir="ltr">
-  <head>
-    {{ partial "head" . }}
-  </head>
-  <body class="[ page__body ][ body stack stack_split-after_4 {{ if eq .Kind "404" }} cover cover_min-height_100vh {{ end }} ]">
+<html class="page"
+      lang="{{ .Page.Lang }}"
+      dir="ltr">
+
+  <head>{{ partial "head" . }}</head>
+
+  <body class="[ page__body ][ body {{ if eq .Kind "404" }} cover cover_min-height_100vh {{ end }} ]">
     {{ partial "skip-links" . }}
+
     {{ block "header" . }}
-      {{ partial "navigation" . }}
+    {{ partial "navigation" . }}
     {{ end }}
+
     {{ block "main" . }}{{ end }}
+
     {{ block "footer" . }}
-      {{ partial "footer" . }}
+    {{ partial "footer" . }}
     {{ end }}
+
     {{ partial "scripts" . }}
   </body>
 </html>
