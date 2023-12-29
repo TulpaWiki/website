@@ -1,38 +1,47 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  <header class="[ body__header ][ cover cover_min-height_50vh ][ background-color_primary margin-top_0 ]" id="header">
-    <div class="cover__centered center center_text stack" style="min-width: 50%">
-      <div class="frame frame_ratio_40:13">
-        {{ $logo := imageConfig "static/images/logo.png" }}
-        <img src="{{ "images/logo.png" | relURL }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ .Site.Title }}" loading="lazy">
-      </div>
-      <div class="cluster cluster_justify_space-around cluster_align_center">
-        <ul class="list-style:none color_light">
-          {{ range .Site.Menus.home }}
-            <li>
-              <a href="{{ .URL }}" title="{{ .Title }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </div>
+{{ partial "navigation" . }}
+<header class="[ body__header ][ cover cover_min-height_50vh ][ background-color_primary margin-top_0 ]"
+        id="header">
+  <div class="cover__centered center center_text stack"
+       style="min-width: 50%">
+    <div class="frame frame_ratio_40:13">
+      {{ $logo := imageConfig "static/images/logo.png" }}
+      <img src="{{ "images/logo.png" | relURL }}"
+           width="{{ $logo.Width }}"
+           height="{{ $logo.Height }}"
+           alt="{{ .Site.Title }}"
+           loading="lazy">
     </div>
-  </header>
+    <div class="cluster cluster_justify_space-around cluster_align_center">
+      <ul class="list-style:none color_light">
+        {{ range .Site.Menus.home }}
+        <li>
+          <a href="{{ .URL }}"
+             title="{{ .Title }}">
+            {{ .Pre }}
+            {{ .Name }}
+            {{ .Post }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ body__main ][ center ][ width_100% ]" id="main" style="padding:0;">
-    {{ $blog := .Site.GetPage "blog" }}
-    <h2>
-      {{ $blog.Title }}
-    </h2>
-    <ul class="list-style:none">
-      {{ range first 5 $blog.Pages }}
-        {{ .Render "summary" }}
-      {{ end }}
-    </ul>
-  </main>
+<main class="[ body__main ][ center ][ width_100% ]"
+      id="main"
+      style="padding:0;">
+  {{ $blog := .Site.GetPage "blog" }}
+  <h2>
+    {{ $blog.Title }}
+  </h2>
+  <ul class="[ stack ][ list-style:none ]">
+    {{ range first 5 $blog.Pages }}
+    {{ .Render "summary" }}
+    {{ end }}
+  </ul>
+</main>
 {{ end }}
