@@ -1,25 +1,27 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  {{ partial "header" . }}
+{{ partial "navigation" . }}
+{{ partial "header" . }}
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ center ][ stack ][ center_padding_gutters ]" id="main">
-    <article class="stack">
-      {{ with .Content }}
-        {{ . }}
+<main class="[ box ][ center stack ][ center_padding_gutters ]"
+      id="main">
+  <article class="stack">
+    {{ with .Content }}
+    {{ . }}
+    {{ end }}
+    <ul>
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink }}"
+           title="{{ .LinkTitle }}">
+          {{ .Title }}
+        </a>
+        <small>{{ .Description }}</small>
+      </li>
       {{ end }}
-      <ul>
-        {{ range .Pages }}
-          <li>
-            <a href="{{ .Permalink }}" title="{{ .LinkTitle }}">
-              {{ .Title }}
-            </a>
-            <small>{{ .Description }}</small>
-          </li>
-        {{ end }}
-      </ul>
-    </article>
-    {{ partial "pagination" . }}
-  </main>
+    </ul>
+  </article>
+  {{ partial "pagination" . }}
+</main>
 {{ end }}

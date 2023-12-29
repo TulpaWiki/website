@@ -31,13 +31,11 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="[ body__main ][ center ][ width:100% ]"
-      id="main"
-      style="padding:0;">
+<main class="[ body__main box ][ center ][ width:100% ]"
+      id="main">
+
   {{ $blog := .Site.GetPage "blog" }}
-  <h2>
-    {{ $blog.Title }}
-  </h2>
+  <h2>{{ $blog.Title }}</h2>
   <ul class="[ stack ][ list-style:none ]">
     {{ range first 5 $blog.Pages }}
     {{ .Render "summary" }}

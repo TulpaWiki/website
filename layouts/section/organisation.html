@@ -4,7 +4,7 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="[ center ][ stack ][ center_padding_gutters ]"
+<main class="[ box ][ center stack ][ center_padding_gutters ]"
       id="main">
 
   <article class="stack">
@@ -13,7 +13,7 @@
     {{ end }}
 
     <ol class="[ stack ][ list-style:none ]"
-        style="--stack-space: var(--s1);">
+        style="--space: var(--s1);">
 
       {{ range .Pages }}
       <li>

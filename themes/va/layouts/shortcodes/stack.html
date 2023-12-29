@@ -1,0 +1,33 @@
+{{- $styles := slice -}}
+{{/* A CSS margin value */}}
+{{- with .Get "space" -}}
+{{- $styles = $styles | append (print "space: " .) -}}
+{{- end -}}
+{{/* Whether the spaces apply recursively (i.e. regardless of nesting level) */}}
+{{- $recursive := .Get "recursive" | default false -}}
+{{/* The element after which to split the stack with an auto margin */}}
+{{- with .Get "splitAfter" -}}
+{{- $styles = $styles | append (print "split-after: " .) -}}
+{{- end -}}
+
+{{- $class := slice .Name -}}
+{{- $attrs := slice -}}
+{{- range $attr, $value := .Params -}}
+{{- if eq $attr "class" -}}
+{{- $class = $class | append $value -}}
+{{- else if and (ne $attr "space") (ne $attr "recursive") (ne $attr "splitAfter") -}}
+{{- $attrs = $attrs | append (printf `%s="%s"` $attr $value) -}}
+{{- end -}}
+{{- end -}}
+
+<div {{ printf `class="%s"` (delimit $class " ") | safeHTMLAttr }}
+     {{ if $recursive }}
+     data-recursive
+     {{ end }}
+     {{ with $styles }}
+     {{ printf `style="--%s"` (delimit $styles "; --%s") | safeHTMLAttr }}
+     {{ end }}
+     {{ range $attrs }}{{ . | safeHTMLAttr }}{{ end }}>
+
+  {{ .Inner }}
+</div>

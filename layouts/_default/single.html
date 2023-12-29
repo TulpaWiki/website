@@ -1,24 +1,26 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  {{ partial "header" . }}
+{{ partial "navigation" . }}
+{{ partial "header" . }}
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ body__main ][ sidebar sidebar_side_left ]" id="main">
-    <div>
-      <aside class="center" style="max-width:13rem;">
-        <section>
-          <header class="stack stack_recursive">
-            <h2>{{ i18n "toc" }}</h2>
-          </header>
-          {{ .TableOfContents }}
-        </section>
-      </aside>
-      {{ with .Content }}
-        <article class="center center_max_x1.5 stack stack_inherit">
-          {{ . }}
-        </article>
-      {{ end }}
-    </div>
-  </main>
+<main class="[ body__main box ][ sidebar sidebar_side_left ]"
+      id="main">
+  <div>
+    <aside class="center"
+           style="max-width:13rem;">
+      <section>
+        <header class="stack stack_recursive">
+          <h2>{{ i18n "toc" }}</h2>
+        </header>
+        {{ .TableOfContents }}
+      </section>
+    </aside>
+    {{ with .Content }}
+    <article class="center center_max_x1.5 stack stack_inherit">
+      {{ . }}
+    </article>
+    {{ end }}
+  </div>
+</main>
 {{ end }}
