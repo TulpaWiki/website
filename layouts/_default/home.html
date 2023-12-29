@@ -1,6 +1,6 @@
 {{ define "header" }}
 {{ partial "navigation" . }}
-<header class="[ body__header ][ cover cover_min-height_50vh ][ background-color_primary margin-top_0 ]"
+<header class="[ body__header ][ cover cover_min-height_50vh ][ background-color_primary margin-top:0 ]"
         id="header">
   <div class="cover__centered center center_text stack"
        style="min-width: 50%">
@@ -31,7 +31,7 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="[ body__main ][ center ][ width_100% ]"
+<main class="[ body__main ][ center ][ width:100% ]"
       id="main"
       style="padding:0;">
   {{ $blog := .Site.GetPage "blog" }}

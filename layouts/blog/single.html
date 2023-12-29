@@ -5,7 +5,7 @@
   {{ range .Params.authors }}
     {{ $authors = $authors | append ($.Site.GetPage (print "authors/" .)) }}
   {{ end }}
-  <div class="[ center center_max_x1.5 ][ width_100% ]">
+  <div class="[ center center_max_x1.5 ][ width:100% ]">
     <h3>
       {{ i18n "by" | title }}
       {{ range $index, $author := $authors }}
@@ -23,7 +23,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <main class="[ body__main ][ center center_max_x1.5 ][ width_100% ]" id="main">
+  <main class="[ body__main ][ center center_max_x1.5 ][ width:100% ]" id="main">
     {{ with .Content }}
       <article class="stack stack_recursive">
         {{ . }}
