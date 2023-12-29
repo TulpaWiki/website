@@ -1,63 +1,64 @@
 {{ define "header" }}
-  {{ partial "navigation" . }}
-  {{ partial "header" . }}
+{{ partial "navigation" . }}
+{{ partial "header" . }}
 {{ end }}
 
 {{ define "main" }}
-  <main class="center center_padding_gutters center_max_x1.5" id="main">
-    {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
-    {{ $numbers := split "0123456789" "" }}
-    <article class="stack">
-      {{ with .Content }}{{ . }}{{ end }}
-      <nav class="cluster">
-        <ul class="list-style_none">
-          <li><a href="{{ $.Page.RelPermalink }}#_">0-9</a></li>
-          {{ range $letters }}
-            <li><a href="{{ $.Page.RelPermalink }}#{{ . | lower }}">{{ . }}</a></li>
+<main class="center center_padding_gutters center_max_x1.5"
+      id="main">
+  {{ $letters := split "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+  {{ $numbers := split "0123456789" "" }}
+  <article class="stack">
+    {{ with .Content }}{{ . }}{{ end }}
+    <nav class="cluster">
+      <ul class="list-style:none">
+        <li><a href="{{ $.Page.RelPermalink }}#_">0-9</a></li>
+        {{ range $letters }}
+        <li><a href="{{ $.Page.RelPermalink }}#{{ . | lower }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    <div class="[ grid js-grid ][ grid_minimum_7.5rem ]">
+      {{ range $i, $number := $numbers }}
+      {{- $pages := slice -}}
+      {{- range $.Pages.ByTitle -}}
+      {{- if hasPrefix .Name $number -}}
+      {{- $pages = $pages | append . -}}
+      {{- end -}}
+      {{- end -}}
+      {{ if gt $pages 0 }}
+      <div class="stack">
+        <h2 id="_">0-9</h2>
+        <hr />
+        <ul class="list-style:none">
+          {{ range $pages }}
+          <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
-      </nav>
-      <div class="[ grid js-grid ][ grid_minimum_7.5rem ]">
-        {{ range $i, $number := $numbers }}
-          {{- $pages := slice -}}
-          {{- range $.Pages.ByTitle -}}
-            {{- if hasPrefix .Name $number -}}
-              {{- $pages = $pages | append . -}}
-            {{- end -}}
-          {{- end -}}
-          {{ if gt $pages 0 }}
-            <div class="stack">
-              <h2 id="_">0-9</h2>
-              <hr/>
-              <ul class="list-style_none">
-                {{ range $pages }}
-                  <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-              </ul>
-            </div>
-          {{ end }}
-        {{ end }}
-
-        {{ range $i, $letter := $letters }}
-          {{- $pages := slice -}}
-          {{- range $.Pages.ByTitle -}}
-            {{- if hasPrefix .Name $letter -}}
-              {{- $pages = $pages | append . -}}
-            {{- end -}}
-          {{- end -}}
-          {{ if gt $pages 0 }}
-            <div class="stack">
-              <h2 id="{{ $letter | lower }}">{{ $letter | upper }}</h2>
-              <hr/>
-              <ul class="list-style_none">
-                {{ range $pages }}
-                  <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-              </ul>
-            </div>
-          {{ end }}
-        {{ end }}
       </div>
-    </article>
-  </main>
+      {{ end }}
+      {{ end }}
+
+      {{ range $i, $letter := $letters }}
+      {{- $pages := slice -}}
+      {{- range $.Pages.ByTitle -}}
+      {{- if hasPrefix .Name $letter -}}
+      {{- $pages = $pages | append . -}}
+      {{- end -}}
+      {{- end -}}
+      {{ if gt $pages 0 }}
+      <div class="stack">
+        <h2 id="{{ $letter | lower }}">{{ $letter | upper }}</h2>
+        <hr />
+        <ul class="list-style:none">
+          {{ range $pages }}
+          <li lang="{{ .Language }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </article>
+</main>
 {{ end }}

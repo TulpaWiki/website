@@ -11,7 +11,10 @@
     {{ with .Summary }}
     <p>{{ . }}</p>
     {{ end }}
-    <ol>
+
+    <ol class="[ stack ][ list-style:none ]"
+        style="--stack-space: var(--s1);">
+
       {{ range .Pages }}
       <li>
         <h2>

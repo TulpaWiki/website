@@ -7,7 +7,7 @@
         <img src="{{ "images/logo.png" | relURL }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ .Site.Title }}" loading="lazy">
       </div>
       <div class="cluster cluster_justify_space-around cluster_align_center">
-        <ul class="list-style_none color_light">
+        <ul class="list-style:none color_light">
           {{ range .Site.Menus.home }}
             <li>
               <a href="{{ .URL }}" title="{{ .Title }}">
@@ -29,7 +29,7 @@
     <h2>
       {{ $blog.Title }}
     </h2>
-    <ul class="list-style_none">
+    <ul class="list-style:none">
       {{ range first 5 $blog.Pages }}
         {{ .Render "summary" }}
       {{ end }}
