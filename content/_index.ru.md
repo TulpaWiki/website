@@ -9,4 +9,4 @@ aliases:
   - /ru/index
 ---
 ## Последние мигрированные гайды
-Хотите помочь в миграции архива сюда? [Присоединяйтесь к нам на GitLab!](https://gitlab.com/tulpawiki/archive)
+Хотите помочь в миграции архива сюда? [Присоединяйтесь к нам на GitHub!](https://github.com/tulpawiki/archive)
