@@ -39,7 +39,6 @@
   --sidebar-content-minimum-width: 50%;
   --sidebar-side-width: inherit;
   --sidebar-space: var(--s1);
-  --stack-space: var(--s0);
   --switcher-space: var(--s1);
   --switcher-threshold: var(--measure);
   --box-border-width: var(--border-thin);
