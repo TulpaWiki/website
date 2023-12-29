@@ -57,3 +57,5 @@ outputs:
     - HTML
 permalinks:
   blog: /blog/:year/:month/:filename
+theme:
+  - va
