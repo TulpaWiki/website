@@ -1,7 +1,7 @@
 ---
 type: guide
 title: 24-часовой гайд
-category: Цельные гайды
+category: Советы по форсингу
 date: 2019-12-29
 ---
 
