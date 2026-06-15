@@ -56,6 +56,6 @@ outputs:
   page:
     - HTML
 permalinks:
-  blog: /blog/:year/:month/:filename
+  blog: /blog/:year/:month/:contentbasename
 theme:
   - va

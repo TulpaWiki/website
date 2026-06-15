@@ -1,7 +1,6 @@
 ---
 title: Гайдотека
 section: archive
-type: section
 menu:
   header:
     identifier: archive
