@@ -192,13 +192,13 @@ b {
 }
 
 code {
-  background-color: hsl(70, 8.1%, 14.5%);
+  background-color: hsl(70, 8.1%, 84.5%);
   color: hsl(0, 0%, 95%);
   padding: var(--s-5);
 }
 
 pre {
-  background-color: hsl(70, 8.1%, 14.5%);
+  background-color: hsl(70, 8.1%, 84.5%);
   padding: var(--s1);
 }
 

@@ -1,7 +1,7 @@
 :root {
   --filter: 0;
   background-color: #fefefe;
-  filter: invert(calc(var(--filter) * 1%));
+  filter: invert(calc(var(--filter) * 1%)) hue-rotate(calc(var(--filter) * 1.8deg));
 }
 
 * {
